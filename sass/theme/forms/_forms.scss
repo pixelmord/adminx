@@ -1,0 +1,175 @@
+@import 'inputs';
+@import 'form-buttons';
+
+form {
+  .fieldset-description:before,
+  .description:before {
+    @extend .icon;
+    @extend .icon-question-circle;
+    margin-right: .4em;
+  }
+}
+.ief-form,
+.ief-form > .fieldset-wrapper,
+form {
+  background: $white;
+  > .field-group-div {
+    border: 1px solid $base-border-color;
+    border-top: 3px solid $drupal-blue;
+    margin: 3em 0 2em;
+    padding: 0.4em 2em;
+    background: rgba($gainsboro, 0.2);
+
+    h3 {
+      text-transform: uppercase;
+      background: $white;
+      border: 1px solid rgba($drupal-blue, .3);
+      @include border-radius($base-border-radius);
+      padding: 0.2em 0.6em;
+      font-size: 1.4em;
+      margin-top: -1.2em;
+      margin-left: -0.4em;
+      @include inline-block();
+      color: $gray;
+      &:before {
+        @extend .icon;
+        @extend .icon-edit;
+        margin-right: .4em;
+      }
+    }
+  }
+}
+
+.ief-form,
+.ief-form > .fieldset-wrapper {
+  border: 1px dashed $drupal-blue;
+  background: rgba($drupal-blue, 0.2);
+  padding: 1em;
+  > .field-group-div {
+    background: rgba($white, 0.7);
+  }
+}
+/* Fieldsets */
+fieldset {
+  border: 1px solid #ddd;
+  border-top: 3px solid $drupal-blue;
+  padding: 12px;
+  margin: 18px 0;
+}
+
+fieldset legend {
+  background: white;
+  padding: 0 5px;
+  margin: 0;
+  margin-left: -5px;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/**
+ * Form elements.
+ */
+.form-item {
+  padding: 0 1em 0 0;
+
+}
+
+.tabledrag-toggle-weight:before {
+  @extend .icon;
+  @extend .icon-eye;
+  margin-right: .4em;
+}
+
+.filter-wrapper .form-item, div.teaser-checkbox .form-item, .form-item .form-item {
+  padding: 5px 0;
+  margin: 0;
+  border: 0;
+}
+
+.form-type-checkbox {
+  padding: 0;
+}
+
+.text-format-wrapper .form-item {
+  padding-bottom: 0;
+}
+
+.form-item label, .exposed-filters .form-item label {
+  //  font-family: "Open Sans", "Segoe UI", "Helvetica", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0;
+  margin: 0 0.5em 0 0;
+  padding: 0.25em 0;
+  width: initial;
+}
+
+.form-item label.option {
+  font-size: 16px;
+  text-transform: none;
+}
+
+.form-item label.option input {
+  vertical-align: middle;
+}
+
+.form-disabled input.form-autocomplete,
+.form-disabled input.form-text,
+.form-disabled input.form-file,
+.form-disabled textarea.form-textarea,
+.form-disabled select.form-select {
+  background-color: #eee;
+  color: #777;
+}
+
+.form-managed-file .form-file, .form-managed-file .form-submit {
+  margin-right: 1em;
+}
+
+input.empty {
+  color: #ccc !important;
+}
+
+/* Filter */
+.filter-wrapper {
+  border: 0;
+  padding: 0;
+  .fieldset-wrapper {
+    padding: 0;
+  }
+}
+
+.filter-wrapper .form-item, .filter-wrapper .filter-guidelines, .filter-wrapper .filter-help {
+  font-size: 0.9em;
+  padding: 2px 0 0 0; /* LTR */
+}
+
+.exposed-filters .filters {
+  width: inherit;
+  display: inline-block;
+}
+
+.exposed-filters .form-item {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+
+
+ul.tips li {
+  margin: 0.25em 0 0.25em 1.5em; /* LTR */
+}
+
+body div.form-type-radio div.description, body div.form-type-checkbox div.description {
+  margin-left: 1.5em; /* LTR */
+}
+
+input.form-button-disabled,
+input.form-button-disabled:active {
+  background: #eee none;
+  border-color: #eee;
+  text-shadow: none;
+  color: #999;
+}
+
+

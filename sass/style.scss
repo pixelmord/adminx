@@ -1,0 +1,25 @@
+/*
+// MAIN STYLESHEET containing layout, features and style overrides
+// ========================================================================== */
+
+@import 'config';
+@import 'utilities/utilities';
+
+@import '../libraries/font-awesome/scss/font-awesome';
+
+@import 'normalize';
+
+@import 'mixed_style';
+// @import 'formalize.scss';
+
+@import 'base/base';
+
+@import 'drupal7/drupal7';
+@import 'drupal7/shortcuts';
+@import 'drupal7/contrib.views';
+@import 'drupal7/contrib.panopoly-magic';
+@import 'drupal7/contrib.panopoly-modal';
+
+@import 'layout/layout';
+
+@import 'theme/theme';

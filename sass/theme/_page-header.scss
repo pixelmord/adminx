@@ -1,0 +1,26 @@
+$branding-padding: 32px !default; // align with favicon in admin menu
+.page-header {
+  background-color: $jet;
+  min-height: 105px;
+  .header-inner {
+    @extend .clearfix;
+    position: relative;
+    padding-top: 15px;
+  }
+}
+
+#corporate-identity {
+  @include position(absolute, 1em 0 auto auto);
+  font-size: 0.9em;
+  text-align: right;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: nth($grays, 3);
+}
+
+#logo {
+  text-align: right;
+  img {
+    max-height: 90px;
+  }
+}

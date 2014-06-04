@@ -1,0 +1,89 @@
+#media-browser-library-list {
+  .media-item {
+    height: 150px;
+    width: 149px;
+    text-align: center;
+    display: table;
+    @include box-shadow($base-box-shadow);
+    &.selected {
+      background: rgba($base-accent-color, 0.3);
+      @include box-shadow(0 0 3px rgba($base-accent-color, 0.7));
+    }
+    img {
+      max-height: 130px;
+      max-width: 140px;
+    }
+    .media-thumbnail {
+      height: 100%;
+      width: 100%;
+      background: rgba($gainsboro, 0.5);
+      display: table-cell;
+      vertical-align: middle;
+      margin: 5px;padding: 5px;
+    }
+    .label-wrapper {
+      @include text-overflow();
+      background: rgba($white, 0.9);
+      left: 1px;
+      right: 1px;
+      width: 93%;
+      padding: 5px;
+    }
+  }
+}
+#media-browser-tabset #branding h1 {
+
+  font-size: 2.6em;
+}
+
+#media-tabs-wrapper {
+  float: none;
+  border-bottom: 1px solid $lightgray;
+  overflow: hidden;
+  > ul {
+    float: right;
+  }
+}
+/* Media Module Styling */
+div.field-type-media {
+  padding-bottom: 1em;
+}
+
+div.ui-dialog.ui-widget.ui-widget-content.ui-corner-all.media-wrapper {
+  padding: 0;
+}
+
+.media-browser-tab.ui-tabs-panel {
+  border: none;
+}
+
+#media-browser-tabset ul.tabs.primary li {
+  margin-left: 0.5em;
+  @include border-top-radius($base-border-radius);
+}
+
+#media-browser-tabset ul.tabs.primary li.ui-state-active {
+  background: #FFFFFF;
+}
+
+#media-browser-tabset ul.tabs.primary li a:link {
+  font-weight: 300;
+  background: transparent;
+  color: #111;
+  border: none;
+  font-size: 16px;
+  line-height: 8px;
+  margin: 0;
+  padding: 10px 20px;
+  @include border-top-radius($base-border-radius);
+}
+
+#media-browser-tabset ul.tabs.primary li a:hover {
+  background: #0074BD;
+  color: #fff;
+}
+
+#media-browser-tabset ul.tabs.primary li.ui-state-active a:hover {
+  background: #fff;
+  color: #111;
+}

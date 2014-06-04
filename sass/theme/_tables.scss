@@ -1,0 +1,114 @@
+/**
+ * Tables.
+ */
+
+table {
+  width: 100%;
+  margin: 0 0 10px;
+}
+
+table td,
+table th {
+  vertical-align: middle;
+  padding: 8px 10px;
+  border: 0;
+  color: $black;
+}
+
+tr.even,
+tr.odd {
+  border: 1px solid transparent;
+  border-bottom-color: #ddd;
+  background: #f3f4ee;
+}
+
+tr.odd {
+  background: #fff;
+}
+
+tr.drag {
+  background: #fe7;
+}
+
+tr.drag-previous {
+  background: #ffb;
+}
+
+table th {
+  background: none repeat scroll 0 0 $lightgray;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 10px;
+  text-align: left;
+}
+
+table th.active {
+  background: $base-accent-color;
+  color: #fff;
+}
+
+table th a {
+  display: block;
+  text-decoration: none;
+}
+
+th.active {
+  // sorting link:
+  a {
+    padding: 0 25px 0 0;/* LTR */
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  // sorting icon
+  .icon {
+    float: right;/* LTR */
+    position: relative;
+    right: -25px;/* LTR */
+    top: 0;
+    margin-top: -1em;
+  }
+}
+
+td.active {
+  background: transparent;
+}
+
+tr.odd td.active {
+  background: transparent;
+}
+
+table tr.selected td.active,
+table tr.selected td {
+  background: #ffc;
+  border-color: #eeb;
+}
+
+table.system-status-report tr {
+  border-bottom: 1px solid #ccc;
+  border-color: rgba(0,0,0,0.1);
+}
+
+.system-status-report tr.ok {
+  color: $success-color;
+  background-color: $success-color-inverted;
+}
+
+.system-status-report tr.info {
+  color: $info-color;
+  background-color: $info-color-inverted;
+}
+
+.system-status-report tr.warning {
+  color: #840;
+  background-color: #fffbe2;
+}
+
+tr.error {
+  color: $error-color;
+  background-color: $error-color-inverted;
+}
+
+tr.error td {
+  color: $error-color;
+}

@@ -1,0 +1,38 @@
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"] {
+  border: 1px solid $base-border-color;
+  @include button-size($base-padding-vertical, 1em, $base-font-size, $base-line-height, $base-border-radius);
+}
+
+input.form-autocomplete,
+input.form-text,
+input.form-file,
+textarea.form-textarea,
+select.form-select {
+  border: 1px solid $base-border-color;
+  background: #fff;
+  color: $gray;
+  vertical-align: baseline;
+}
+
+.selectize-control.single .selectize-input {
+
+  padding-right: 3em;
+}
+.selectize-dropdown-content {
+  > div {
+    display: block;
+  }
+}

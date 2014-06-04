@@ -1,0 +1,35 @@
+.tabs {
+  &.primary {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-left: 0;
+    li {
+      a {
+        margin-right: 0.2em;
+        font-size: $h3-font-size;
+        margin-top: 4px;
+        padding: 0.5em 1.3em;
+      }
+      &:hover,
+      &.active {
+        a {
+          margin-top: 0;
+          border-top: 4px solid $base-accent-color;
+        }
+      }
+    }
+  }
+  &.secondary {
+    li {
+      a {
+        border: 1px solid transparent;
+      }
+      &:hover,
+      &.active {
+        a {
+          border: 1px solid $base-accent-color;
+        }
+      }
+    }
+  }
+}

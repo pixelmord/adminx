@@ -1,0 +1,60 @@
+/* Buttons */
+
+// STD Gray Button
+.form-submit,
+button,
+.button,
+.exposed-filters #edit-submit {
+  @include btn();
+  @include button-variant($btn-default-color, $btn-default-bg, $btn-default-border);
+  margin-right: 0.7em;
+}
+
+
+// Green Button
+#edit-submit,
+#edit-actions-submit,
+input[id^="save-continue"],
+input[id^="edit-save"],
+#edit-save,
+#edit-actions-save,
+input.ief-entity-submit,
+#modal-content .form-submit {
+  @include btn();
+  @extend .btn-success;
+}
+
+// DANGER Red Button
+#edit-delete,
+#remove-button,
+#edit-remove,
+#edit-clear,
+.page-admin-modules-uninstall input#edit-submit {
+  @include btn();
+  @extend .btn-danger;
+}
+
+
+// PRIMARY Blue Button
+#edit-preview,
+#edit-next,
+#preview-submit,
+input[id^="edit-return"] {
+  @include btn();
+  @extend .btn-primary;
+}
+
+
+// WARNING Orange Button
+#edit-cancel,
+#edit-actions-cancel,
+#edit-buttons-revert {
+  @include btn();
+  @extend .btn-warning;
+}
+
+a#edit-cancel,a#edit-actions-cancel {
+  padding: 6px 10px;
+  text-decoration: none;
+}
+
