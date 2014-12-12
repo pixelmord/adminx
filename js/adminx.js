@@ -9,6 +9,17 @@
           'autofocus': 'autofocus'
         });
       }
+      $('body').click(function(){
+        console.log('my-click');
+        setTimeout(function() {
+          if ($('body > .ui-dialog').length || $('#modalContent').length) {
+            $('html').addClass('modal-active');
+          }
+          else {
+            $('html').removeClass('modal-active');
+          }
+        }, 500);
+      });
     }
   };
 
