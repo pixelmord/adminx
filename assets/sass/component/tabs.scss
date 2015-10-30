@@ -1,0 +1,91 @@
+@import '../config';
+
+.tabs {
+  display: block;
+  width: 100%;
+}
+
+.tabs--primary {
+  margin-bottom: 2em;
+}
+.tabs--secondary {
+  margin-top: -1em;
+  margin-bottom: 2em;
+}
+.tabs__tab-bar {
+  display         : flex;
+  flex-direction  : row;
+  justify-content : left; // ⇾
+  align-content   : space-between; // ||
+  align-items     : flex-start; // ↓
+
+  height          : 48px;
+  padding         : 0 0 0 0;
+  margin          : 0;
+  .tabs--primary & {
+    border-bottom   : 1px solid $tab-border-color;
+  }
+
+}
+
+.tabs__tab {
+  margin: 0;
+  border: none;
+  padding: 0 24px 0 24px;
+
+  float: left;
+  position: relative;
+  display: block;
+
+  text-decoration: none;
+  height: 48px;
+  line-height: 48px;
+
+  text-align: center;
+  font-weight: 500;
+  font-size: $layout-tab-font-size;
+  text-transform: uppercase;
+
+  color: $tab-text-color;
+  overflow: hidden;
+
+  &:after {
+    opacity: 0;
+    content: '';
+    position: absolute;
+    height: 2px;
+    bottom: 0;
+    left: 20%;
+    right: 20%;
+    background-color: $tab-active-text-color;
+    transition: left 0.5s ease, right 0.5s ease, opacity 0.1s linear;
+  }
+  .tabs--secondary & {
+    color: $color-accent;
+    font-size: $layout-tab-font-size * 0.9;
+    padding: 0 14px 0 14px;
+    height: 30px;
+    line-height: 30px;
+  }
+  .tabs--secondary &:after {
+    height: 1px;
+    background-color: $tab-active-text-color;
+  }
+
+  &.is-active {
+    color: $tab-active-text-color;
+  }
+
+  &:hover,
+  &.is-active {
+    text-decoration: none;
+
+    &:after {
+      opacity: 1;
+      left: 0;
+      right: 0;
+    }
+  }
+}
+
+

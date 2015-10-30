@@ -1,0 +1,11 @@
+/**
+ * @file
+ * Inline items.
+ */
+
+.container-inline {
+  display: flex;
+  .form-item {
+    margin: 0;
+  }
+}

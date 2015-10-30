@@ -1,0 +1,13 @@
+//
+// Simple-Flexible - A really basic flexible layout
+// =============================================================================
+
+%page-layout {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.layout-container {
+  @extend %page-layout;
+}

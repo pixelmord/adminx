@@ -1,0 +1,20 @@
+uuid: 5bb7840f-772b-4932-b043-67a6d799fead
+langcode: de
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - adminx
+id: adminx_powered
+theme: adminx
+region: '-1'
+weight: -4
+provider: null
+plugin: system_powered_by_block
+settings:
+  id: system_powered_by_block
+  label: 'Powered by Drupal'
+  provider: system
+  label_display: '0'
+visibility: {  }

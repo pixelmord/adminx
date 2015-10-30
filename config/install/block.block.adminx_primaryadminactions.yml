@@ -1,0 +1,18 @@
+uuid: 5c5393c1-e8c5-43d9-b734-523fc3243629
+langcode: de
+status: true
+dependencies:
+  theme:
+    - adminx
+id: adminx_primaryadminactions
+theme: adminx
+region: help
+weight: -3
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

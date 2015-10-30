@@ -1,0 +1,46 @@
+name: Adminx
+type: theme
+base theme: seven
+description: A simple one-column, tableless, minimalist administration theme.
+core: 8.x
+
+#----------------- S T Y L E S --------------------
+
+libraries:
+ - adminx/global-styling
+
+stylesheets-remove:
+ - '@classy/css/components/buttons.css'
+ - '@classy/css/components/breadcrumb.css'
+ - '@classy/css/components/content-header.css'
+ - '@classy/css/components/form.css'
+ - '@classy/css/components/tabs.css'
+ - '@seven/css/components/buttons.css'
+ - '@seven/css/components/breadcrumb.css'
+ - '@seven/css/components/content-header.css'
+ - '@seven/css/components/dropbutton.component.css'
+ - '@seven/css/base/elements.css'
+ - '@seven/css/components/form.css'
+ - '@seven/css/components/tables.css'
+ - '@seven/css/components/tabs.css'
+
+#---------------- R E G I O N S -------------------
+
+regions:
+  header: 'Header'
+  pre_content: 'Pre-content'
+  breadcrumb: Breadcrumb
+  highlighted: Highlighted
+  help: Help
+  content: Content
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  sidebar_first: 'First sidebar'
+regions_hidden:
+  - sidebar_first
+
+settings:
+  features:
+      favicon: true
+      logo: true
+      slogan: false

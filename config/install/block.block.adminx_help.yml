@@ -1,0 +1,20 @@
+uuid: 469a1037-79b9-48d2-a900-b822f2b92090
+langcode: de
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - adminx
+id: adminx_help
+theme: adminx
+region: help
+weight: -5
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Hilfe
+  provider: help
+  label_display: '0'
+visibility: {  }

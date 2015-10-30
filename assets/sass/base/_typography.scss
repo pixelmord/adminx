@@ -1,0 +1,211 @@
+/*
+//
+// Typography styles
+// =============================================================================
+*/
+
+
+html>body {
+  font-family: 'Roboto','Helvetica','Arial',sans-serif!important;
+  background-color: #FAFAFA
+}
+
+h4 {
+  &.label {
+    font-size: $base-font-size;
+    color: $label-color;
+
+    &.inline {
+      margin: 0 .5em 0 0;
+    }
+  }
+}
+/*
+
+
+/!*
+Headline specials
+*!/
+h1 {
+  color: $fbs-secondary;
+}
+
+h3 {
+  color: #666666;
+}
+
+.text-inverted {
+  color: $fbs-light-gray;
+}
+.headlines-inverted {
+  h1, h2, h3, h4, h5, h6 {
+    color: $white;
+  }
+}
+/!*
+// Lists
+// -----------------------------------------------------------------------------
+*!/
+
+.cke_editable {
+  ul, ol, dl {
+    overflow: hidden;
+
+    li {
+      position: relative;
+      left: 1.5em;
+      width: 95%;
+    }
+  }
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+
+main[role=main] {
+  ul {
+    > li {
+      list-style: none;
+
+      &:before {
+        content: '';
+        display: inline-block;
+        width: 0.4em;
+        height: 0.4em;
+        border-radius: 50%;
+        background-color: $fbs-secondary;
+        margin-left: -0.7em;
+        margin-right: 0.4em;
+        vertical-align: middle;
+        margin-top: -1px;
+      }
+
+      li {
+        &:before {
+          background-color: $text-color-light;
+        }
+      }
+
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  ul.unstyled,
+  ol.unstyled,
+  nav ul,
+  nav ol,
+  ul.menu,
+  ol.menu, {
+    margin-left: 0;
+    list-style: none;
+    list-style-image: none;
+
+    li {
+      &:before {
+        display: none;
+      }
+    }
+  }
+}
+
+/!*
+// Misc
+// -----------------------------------------------------------------------------
+*!/
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid $silver;
+  margin: 0;
+  padding: 0;
+  @extend .trailer-100;
+}
+
+/!*
+// Addresses
+*!/
+address {
+  display: block;
+  font-style: normal;
+  @extend .trailer-100;
+}
+
+blockquote {
+  p {
+    margin-bottom: 0;
+  }
+
+  footer,
+  small {
+    display: block;
+    color: $silver;
+
+    &:before {
+      content: '\2014 \00A0';
+    }
+  }
+}
+
+/!*
+// Remove text-shadow in selection highlight: h5bp.com/i
+// These selection declarations have to be separate.
+// Customize the background color to match your design.
+*!/
+::-moz-selection {
+  background: $text-selection-color;
+  text-shadow: none;
+}
+::selection {
+  background: $text-selection-color;
+  text-shadow: none;
+}
+.caps {
+  text-transform: uppercase;
+}
+
+/!*
+
+/!*
+// Predefined type sizes
+//
+// A series of classes for setting massive type; for use in heroes, mastheads,
+// promos, etc.
+// A series of classes for setting small type, for use in smallprint etc.
+//
+// Markup:
+// <p class="micro">Paragraph "micro": Normally, both your asses would be dead as fucking fried chicken, but you happen to pull this shit while I'm in a transitional period so I don't wanna kill you, I wanna help you. </p>
+// <p class="small">Paragraph "small": But I can't give you this case, it don't belong to me.</p>
+// <p>Paragraph without any class: -he's the exact opposite of the hero. And most times they're friends, like you and me!</p>
+// <p class="huge">Paragraph "huge": It all makes sense! In a comic, you know how you can tell who the arch-villain's going to be?</p>
+// <p class="mega">Paragraph "mega": Now that we know who you are, I know who I am. I'm not a mistake!</p>
+// <p class="giga">Paragraph "giga": Besides, I've already been through too much shit this morning over this case to hand it over to your dumb ass.</p>
+//
+// Styleguide 3.2.3
+*!/
+
+.micro {
+  @mixin ratio 'font-size', $micro-font-size, $base-font-size;
+}
+.small {
+  @mixin ratio 'font-size', $small-font-size, $base-font-size;
+}
+.huge {
+  @mixin ratio 'font-size', $huge-font-size, $base-font-size;
+}
+.mega {
+  @mixin ratio 'font-size', $mega-font-size, $base-font-size;
+}
+.giga {
+  @mixin ratio 'font-size', $giga-font-size, $base-font-size;
+}
+*!/
+*/

@@ -1,0 +1,87 @@
+//
+// Color definitions
+// =============================================================================
+
+// -----------------------------------------------------------------------------
+// Basic colors
+// -----------------------------------------------------------------------------
+
+$black: #000;
+$white: #fff;
+
+// Shades of gray (not the book, just the colors)
+// http://en.wikipedia.org/wiki/Shades_of_gray
+$grays: #DCDCDC #D3D3D3 #C0C0C0 #BEBEBE #A9A9A9 #808080 #696969 #555555 #343434;
+
+$gainsboro:       #DCDCDC;
+$lightgray:       #D3D3D3;
+$silver:          #C0C0C0;
+$mediumgray:      #BEBEBE;
+$darkgray:        #A9A9A9;
+$gray:            #808080;
+$dimgray:         #696969;
+$davygray:        #555555;
+$jet:             #343434;
+
+// -----------------------------------------------------------------------------
+// Customer Colors
+// -----------------------------------------------------------------------------
+
+// Add customer colors here
+
+$carrot-orange:  #e56716;
+$sky-blue:       #58b8d1;
+$leaf-green:     #88b700;
+$drupal-blue:    #0074BD;
+
+// -----------------------------------------------------------------------------
+// Typography colors
+// -----------------------------------------------------------------------------
+
+$text-color:              $black;
+$text-selection-color:    rgba($drupal-blue, 0.2);
+
+$headings-color:         inherit;
+
+$link-color:        $drupal-blue;
+$link-color-hover:  lighten($link-color, 20%);
+
+// -----------------------------------------------------------------------------
+// Backgrounds
+// -----------------------------------------------------------------------------
+
+$base-body-color: $gainsboro;
+$body-background: $gainsboro;
+
+// -----------------------------------------------------------------------------
+// Functional color variables
+// -----------------------------------------------------------------------------
+
+$error-color: #C70000;
+$error-color-inverted: #FFDDDD;
+
+$warning-color: #ff9421;
+$warning-color-inverted:     #fffce5;
+
+$success-color: #1a7000;
+$success-color-inverted: #e5ffe2;
+
+$info-color: #005a93;
+$info-color-inverted: #bdf;
+
+
+$base-background-color: $white;
+$base-border-color: $mediumgray;
+$base-accent-color: lighten($drupal-blue, 20%);
+
+$placeholder-color: nth($grays, 1);
+
+$base-box-shadow: 1px 1px 2px rgba($black, 0.2);
+
+// -----------------------------------------------------------------------------
+// Other colors
+// -----------------------------------------------------------------------------
+
+$unpublished-color: #fff4f4;
+$preview-color:     #ffffea;
+$current-revision:  #ffc;

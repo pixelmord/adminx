@@ -1,0 +1,20 @@
+uuid: b155849b-8024-419a-8000-d6af7c0b1e7c
+langcode: de
+status: true
+dependencies:
+  theme:
+    - adminx
+id: adminx_tabs
+theme: adminx
+region: pre_content
+weight: -9
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

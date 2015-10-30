@@ -1,0 +1,23 @@
+uuid: e060025a-0be6-4e5c-ab00-c6b24992d80a
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - adminx
+id: adminx_sitebranding
+theme: adminx
+region: header
+weight: -8
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Site branding'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: false
+  use_site_slogan: false
+visibility: {  }

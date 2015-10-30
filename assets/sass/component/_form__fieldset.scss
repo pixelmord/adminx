@@ -1,0 +1,42 @@
+
+fieldset {
+  legend {
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+}
+fieldset {
+  background-color: #fcfcfa;
+  border: none;
+  border-radius: 2px;
+  margin: 1em 0;
+  padding: 30px 18px 18px;
+  position: relative;
+
+}
+fieldset > legend {
+  font-size: 1em;
+  position: absolute;
+  top: 10px;
+}
+.fieldgroup {
+  min-width: 0;
+}
+@-moz-document url-prefix() {
+  .fieldgroup {
+    display: table-cell;
+  }
+}
+
+form {
+  .layout-region-node-main {
+    > fieldset.form-wrapper {
+      padding-top: 50px;
+      > legend {
+        top: 20px;
+      }
+    }
+  }
+}

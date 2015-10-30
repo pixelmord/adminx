@@ -1,0 +1,79 @@
+/*
+//
+// Link styles
+// =============================================================================
+*/
+
+a {
+  color: $text-link-color;
+  text-decoration: none;
+  transition: 0.3s color, 0.3s background;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $text-link-color-hover;
+    text-decoration: underline;
+
+    &.icon {
+      text-decoration: none;
+    }
+  }
+}
+
+.links-inverted {
+  a {
+    color: $white;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $lightgray;
+    }
+  }
+}
+
+/*
+// Links within paragraphs
+*/
+p a {
+
+}
+
+/*
+// current / active link
+*/
+.current,
+.active {
+  > a {
+    cursor: text;
+    text-decoration: underline;
+  }
+}
+
+/*
+// links in headlines
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.alpha,
+.beta,
+.gamma,
+.delta,
+.epsilon,
+.zeta {
+  a {
+    color: inherit;
+
+    &:hover,
+    &:active,
+    &:focus {
+      color: $text-link-color-hover;
+      text-decoration: none;
+    }
+  }
+}

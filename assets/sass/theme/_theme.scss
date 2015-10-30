@@ -1,0 +1,42 @@
+//
+// Theme - Import file
+//
+// These files are supposed to connect the modules with the page elements
+// like views, blocks or panels. They also apply project or customer related
+// styles like coloring, spacing and so on.
+//
+// =============================================================================
+/*******************************************************************************
+     _____ _
+    |_   _| |__   ___ _ __ ___   ___
+      | | | '_ \ / _ \ '_ ` _ \ / _ \
+      | | | | | |  __/ | | | | |  __/
+      |_| |_| |_|\___|_| |_| |_|\___|
+*******************************************************************************/
+// Components
+@import 'global';
+
+@import 'theme/buttons';
+
+@import 'forms/forms';
+
+@import 'tabs';
+@import 'messages';
+@import 'tables';
+
+
+// Region styling
+@import 'page-header';
+
+// Page styling
+
+@import 'page';
+@import 'admin.views';
+
+// Node styling
+
+// Module styling
+@import 'media-browser';
+@import 'file-administration';
+
+// Library styling

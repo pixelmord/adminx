@@ -1,0 +1,20 @@
+uuid: 58a8b83f-b784-478c-8c05-5d2e62e8cb41
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - adminx
+id: adminx_content
+theme: adminx
+region: content
+weight: -9
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: Haupt-Seiteninhalt
+  provider: system
+  label_display: '0'
+visibility: {  }

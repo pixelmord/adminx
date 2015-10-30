@@ -1,0 +1,11 @@
+
+.mdl-button--danger.mdl-button--danger {
+  color: $error-color;
+  & .mdl-ripple {
+    background: $error-color-inverted;
+  }
+  &.mdl-button--raised, &.mdl-button--fab {
+    color: $error-color;
+    background-color: $error-color-inverted;
+  }
+}

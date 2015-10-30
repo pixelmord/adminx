@@ -1,0 +1,29 @@
+@import '../config';
+
+.content-header {
+  background: $jet;
+  color: $white;
+  margin-bottom: 2em;
+
+  > .layout-container {
+    position: relative;
+  }
+  .region-header {
+    min-height: 80px;
+  }
+}
+
+.page-title {
+  font-size: 130%;
+}
+.block-system-branding-block {
+  right: 0;
+  width: 100px;
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -20px;
+
+  img {
+    max-width: 100%;
+  }
+}

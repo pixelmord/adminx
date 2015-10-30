@@ -1,0 +1,86 @@
+<?php
+
+/**
+ * Implements theme_preprocess_HOOK().
+ *
+ * @param array $variables
+ *   Array of template variables.
+ */
+function adminx_preprocess_menu_local_task(&$variables) {
+  $variables['link']['#options']['attributes']['class'][] = 'tabs__tab';
+  if ($variables['element']['#active'] == TRUE) {
+    $variables['link']['#options']['attributes']['class'][] = 'is-active';
+  }
+}
+
+/**
+ * Implements theme_preprocess_HOOK().
+ *
+ * @param array $variables
+ *   Array of template variables.
+ */
+function adminx_preprocess_menu_local_action(&$variables) {
+
+  $variables['link']['#options']['attributes']['class'] = array(
+    'button-action',
+    'mdl-button',
+    'mdl-js-button',
+    'mdl-button--raised',
+    'mdl-button--colored',
+  );
+
+}
+
+/**
+ * Implements theme_preprocess_HOOK().
+ *
+ * @param array $variables
+ *   Array of template variables.
+ */
+function adminx_preprocess_block__system_branding_block(&$variables) {
+  $variables['site_logo'] = str_replace('.svg', '.png', $variables['site_logo']);
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * @param array $variables
+ */
+function adminx_theme_suggestions_form_element_alter(&$suggestions, $variables) {
+  $suggestions[] = 'form_element__' . $variables['element']['#type'];
+  if($variables['element']['#type'] == 'textarea' && ($variables['element']['#id'] == 'edit-menu-description' || strpos($variables['element']['#id'], 'edit-revision-log') !== FALSE)) {
+    $suggestions[] = 'form_element__textarea_plain';
+  }
+}
+
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * @param array $variables
+ */
+function adminx_theme_suggestions_textarea_alter(&$suggestions, $variables) {
+  if ($variables['element']['#id'] == 'edit-menu-description' || strpos($variables['element']['#id'], 'edit-revision-log') !== FALSE) {
+    $suggestions[] = 'textarea__plain';
+  }
+}
+
+/**
+ * Implements theme_preprocess_HOOK().
+ *
+ * @param array $variables
+ *   Array of template variables.
+ */
+function adminx_preprocess_input__submit(&$variables) {
+  $variables = $variables;
+  if (isset($variables['element']['#ief_form']) && $variables['element']['#ief_form'] == 'add') {
+    $variables['element']['#button_type'] = 'primary';
+  }
+  $parents = $variables['element']['#parents'];
+  if(isset($parents) && in_array('ief_add_save', $parents, TRUE)) {
+    $variables['element']['#button_type'] = 'primary';
+  }
+  if(isset($parents) && in_array('remove_button', $parents, TRUE)) {
+    $variables['element']['#button_type'] = 'danger';
+  }
+}

@@ -1,0 +1,26 @@
+uuid: ae5d8f41-dff4-4c9c-a300-ae049fbb0e54
+langcode: de
+status: false
+dependencies:
+  config:
+    - system.menu.social-menu
+  module:
+    - system
+  theme:
+    - adminx
+id: adminx_socialmenu
+theme: adminx
+region: '-1'
+weight: -1
+provider: null
+plugin: 'system_menu_block:social-menu'
+settings:
+  id: 'system_menu_block:social-menu'
+  label: 'Social Menu'
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+  attributes:
+    class: 'navigation-social navigation-social--header'
+visibility: {  }

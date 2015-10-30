@@ -1,0 +1,39 @@
+global-styling:
+  css:
+    base:
+      assets/css/base/elements.css: {}
+    component:
+      # css-components:css #
+
+      assets/css/component/admin-list.css: {}
+
+      assets/css/component/breadcrumbs.css: {}
+
+      assets/css/component/container-inline.css: {}
+
+      assets/css/component/content-header.css: {}
+
+      assets/css/component/details.css: {}
+
+      assets/css/component/dropbutton.css: {}
+
+      assets/css/component/form.css: {}
+
+      assets/css/component/ief-form.css: {}
+
+      assets/css/component/inline-form.css: {}
+
+      assets/css/component/tabledrag.css: {}
+
+      assets/css/component/tables.css: {}
+
+      assets/css/component/tabs.css: {}
+
+      # endinject #
+    layout:
+      assets/css/layout.css: {}
+    theme:
+      assets/css/theme.css: {}
+  js:
+    assets/js/material-drupal-fixes.js: {}
+    assets/js/material.js: {}

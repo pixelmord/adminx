@@ -1,0 +1,20 @@
+uuid: 079d2fe8-d30a-4cdb-9500-d8d1b05541c2
+langcode: de
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - adminx
+id: adminx_breadcrumbs
+theme: adminx
+region: header
+weight: -7
+provider: null
+plugin: system_breadcrumb_block
+settings:
+  id: system_breadcrumb_block
+  label: Breadcrumbs
+  provider: system
+  label_display: '0'
+visibility: {  }

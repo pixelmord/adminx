@@ -1,0 +1,15 @@
+.draggable a.tabledrag-handle {
+  height: 2em;
+}
+
+a.tabledrag-handle .handle {
+  height: auto;
+  margin: 0.7em 0.5em 0;
+  background-position: 0 0;
+  width: 17px;
+}
+.tabledrag-toggle-weight-wrapper {
+  .link {
+    font-size: 0.7em;
+  }
+}

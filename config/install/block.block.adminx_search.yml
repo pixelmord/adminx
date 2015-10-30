@@ -1,0 +1,20 @@
+uuid: 6fb8c6d0-d69f-4b71-922f-472af3b79505
+langcode: de
+status: false
+dependencies:
+  module:
+    - search
+  theme:
+    - adminx
+id: adminx_search
+theme: adminx
+region: '-1'
+weight: 0
+provider: null
+plugin: search_form_block
+settings:
+  id: search_form_block
+  label: Suche
+  provider: search
+  label_display: visible
+visibility: {  }

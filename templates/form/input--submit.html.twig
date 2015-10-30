@@ -1,0 +1,11 @@
+{% set classes = [
+    'mdl-button',
+    'mdl-js-button',
+    'mdl-button--raised',
+    element['#button_type'] == 'primary' ? 'mdl-button--colored',
+    element['#ief_row_form'] == 'edit' ? 'mdl-button--colored',
+    element['#ief_row_form'] == 'remove' ? 'mdl-button--danger',
+    element['#button_type'] == 'danger' ? 'mdl-button--danger',
+  ]
+%}
+<input{{ attributes.addClass(classes) }} />{{ children }}

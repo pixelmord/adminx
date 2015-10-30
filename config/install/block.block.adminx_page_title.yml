@@ -1,0 +1,18 @@
+uuid: a6bdf3d2-2662-4867-b500-dbeb18eed2ed
+langcode: de
+status: true
+dependencies:
+  theme:
+    - adminx
+id: adminx_page_title
+theme: adminx
+region: header
+weight: -9
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility: {  }
