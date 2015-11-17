@@ -9,6 +9,12 @@ core: 8.x
 libraries:
  - adminx/global-styling
 
+libraries-override:
+  views_ui/admin.styling:
+    css:
+      theme:
+        css/views_ui.admin.theme.css: false
+
 stylesheets-remove:
  - '@classy/css/components/buttons.css'
  - '@classy/css/components/breadcrumb.css'

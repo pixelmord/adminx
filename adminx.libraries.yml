@@ -29,6 +29,12 @@ global-styling:
 
       assets/css/component/tabs.css: {}
 
+      assets/css/component/views-ui.css: {}
+
+      assets/css/component/views_ui.admin.theme.css: {}
+
+      assets/css/component/views_ui.css: {}
+
       # endinject #
     layout:
       assets/css/layout.css: {}
