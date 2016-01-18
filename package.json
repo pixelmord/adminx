@@ -4,18 +4,11 @@
   "description": "Drupal 8 admin theme.",
   "devDependencies": {
     "gulp": "^3.9.0",
-    "gulp-task-css-inject": "wunderkraut/gulp-task-css-inject",
-    "gulp-task-lint-browser": "wunderkraut/gulp-task-lint-browser",
-    "gulp-task-postcss": "wunderkraut/gulp-task-postcss",
+    "gulp-task-css-inject": "github:wunderkraut/gulp-task-css-inject",
+    "gulp-task-lint-browser": "github:wunderkraut/gulp-task-lint-browser",
     "gulp-task-sass": "github:wunderkraut/gulp-task-sass",
-    "gulp-task-svg-stack": "wunderkraut/gulp-task-svg-stack",
-    "path": "^0.12.7",
-    "postcss-advanced-variables": "^1.1.0",
-    "postcss-color-function": "^2.0.0",
-    "postcss-extend": "^1.0.0",
-    "postcss-import": "^7.0.0",
-    "postcss-mixins": "^1.0.1",
-    "postcss-nested": "^1.0.0"
+    "gulp-task-svg-stack": "github:wunderkraut/gulp-task-svg-stack",
+    "path": "^0.12.7"
   },
   "engines": {
     "node": ">=0.12.0"
