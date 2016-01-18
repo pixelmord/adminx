@@ -2,7 +2,7 @@
   "name": "adminx",
   "version": "0.1.0",
   "dependencies": {
-    "material-design-lite": "~1.0.5",
+    "material-design-lite": "~1.0.6",
     "material-design-icons": "~2.0.0"
   },
   "devDependencies": {}
