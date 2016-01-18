@@ -1,7 +1,7 @@
 name: Adminx
 type: theme
 base theme: seven
-description: A simple one-column, tableless, minimalist administration theme.
+description: Administration theme based on material design styles.
 core: 8.x
 
 #----------------- S T Y L E S --------------------

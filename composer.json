@@ -1,0 +1,8 @@
+{
+    "name": "drupal/adminx",
+    "description": "Administration theme based on material design styles..",
+    "type": "drupal-theme",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "require": {}
+}
