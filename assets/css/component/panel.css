@@ -1,0 +1,17 @@
+/**
+ * @file
+ * Panel styling. Panels are used to visually group items together.
+ */
+.panel {
+  margin: 0 0 20px;
+  padding: 9px;
+  background: #f8f8f8;
+  border: 1px solid #ccc; }
+
+.panel__title {
+  font-size: 1em;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 9px; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInBhbmVsLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQTs7O0dBR0c7QUFDSDtFQUNFLGlCQUFpQjtFQUNqQixhQUFhO0VBQ2Isb0JBQW9CO0VBQ3BCLHVCQUF1QixFQUFFOztBQUUzQjtFQUNFLGVBQWU7RUFDZiwwQkFBMEI7RUFDMUIsVUFBVTtFQUNWLG9CQUFvQixFQUFFIiwiZmlsZSI6ImNvbXBvbmVudC9wYW5lbC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBmaWxlXG4gKiBQYW5lbCBzdHlsaW5nLiBQYW5lbHMgYXJlIHVzZWQgdG8gdmlzdWFsbHkgZ3JvdXAgaXRlbXMgdG9nZXRoZXIuXG4gKi9cbi5wYW5lbCB7XG4gIG1hcmdpbjogMCAwIDIwcHg7XG4gIHBhZGRpbmc6IDlweDtcbiAgYmFja2dyb3VuZDogI2Y4ZjhmODtcbiAgYm9yZGVyOiAxcHggc29saWQgI2NjYzsgfVxuXG4ucGFuZWxfX3RpdGxlIHtcbiAgZm9udC1zaXplOiAxZW07XG4gIHRleHQtdHJhbnNmb3JtOiB1cHBlcmNhc2U7XG4gIG1hcmdpbjogMDtcbiAgcGFkZGluZy1ib3R0b206IDlweDsgfVxuIl0sInNvdXJjZVJvb3QiOiIvc291cmNlLyJ9 */

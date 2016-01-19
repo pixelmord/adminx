@@ -1,7 +1,50 @@
 <?php
 
+use Drupal\Core\Form\FormStateInterface;
+
+/**
+ * Implements hook_preprocess_HOOK() for HTML document templates.
+ */
+function adminx_preprocess_html(&$variables) {
+  // If on a node add or edit page, add a node-layout class.
+  $path_args = explode('/', \Drupal::request()->getPathInfo());
+  if ($suggestions = theme_get_suggestions($path_args, 'page', '-')) {
+    foreach ($suggestions as $suggestion) {
+      if ($suggestion === 'page-node-edit' || strpos($suggestion, 'page-node-add') !== FALSE) {
+        $variables['attributes']['class'][] = 'node-form-layout';
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_pre_render_HOOK() for menu-local-tasks templates.
+ *
+ * Use preprocess hook to set #attached to child elements
+ * because they will be processed by Twig and drupal_render will
+ * be invoked.
+ */
+function adminx_preprocess_menu_local_tasks(&$variables) {
+  if (!empty($variables['primary'])) {
+    $variables['primary']['#attached'] = array(
+      'library' => array(
+        'adminx/drupal.nav-tabs',
+      ),
+    );
+  }
+  elseif (!empty($variables['secondary'])) {
+    $variables['secondary']['#attached'] = array(
+      'library' => array(
+        'adminx/drupal.nav-tabs',
+      ),
+    );
+  }
+}
+
 /**
  * Implements theme_preprocess_HOOK().
+ *
+ * Set active class to active item.
  *
  * @param array $variables
  *   Array of template variables.
@@ -28,17 +71,145 @@ function adminx_preprocess_menu_local_action(&$variables) {
     'mdl-button--raised',
     'mdl-button--colored',
   );
+  // @todo: We require Modernizr's touch test for button styling.
+  $variables['#attached']['library'][] = 'core/modernizr';
+}
 
+/**
+ * Implements hook_preprocess_HOOK() for list of available node type templates.
+ */
+function adminx_preprocess_node_add_list(&$variables) {
+  if (!empty($variables['content'])) {
+    /** @var \Drupal\node\NodeTypeInterface $type */
+    foreach ($variables['content'] as $type) {
+      $variables['types'][$type->id()]['label'] = $type->label();
+      $variables['types'][$type->id()]['url'] = \Drupal::url('node.add', array('node_type' => $type->id()));
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for block content add list templates.
+ *
+ * Displays the list of available custom block types for creation, adding
+ * separate variables for the label and url.
+ */
+function adminx_preprocess_block_content_add_list(&$variables) {
+  if (!empty($variables['content'])) {
+    foreach ($variables['content'] as $type) {
+      $variables['types'][$type->id()]['label'] = $type->label();
+      $options = array('query' => \Drupal::request()->query->all());
+      $variables['types'][$type->id()]['url'] = \Drupal::url('block_content.add_form', array('block_content_type' => $type->id()), $options);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_block() for block content.
+ *
+ * Disables contextual links for all blocks.
+ */
+function adminx_preprocess_block(&$variables) {
+  if (isset($variables['title_suffix']['contextual_links'])) {
+    unset($variables['title_suffix']['contextual_links']);
+    unset($variables['elements']['#contextual_links']);
+
+    $variables['attributes']['class'] = array_diff($variables['attributes']['class'], ['contextual-region']);
+  }
 }
 
 /**
  * Implements theme_preprocess_HOOK().
  *
+ * @todo: Remove as soon as logo is changed to svg
+ *
  * @param array $variables
  *   Array of template variables.
  */
 function adminx_preprocess_block__system_branding_block(&$variables) {
+  $variables['attributes']['class'][] = 'block-system-branding-block';
   $variables['site_logo'] = str_replace('.svg', '.png', $variables['site_logo']);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for block admin page templates.
+ */
+function adminx_preprocess_admin_block_content(&$variables) {
+  if (!empty($variables['content'])) {
+    foreach ($variables['content'] as $key => $item) {
+      $variables['content'][$key]['url'] = $item['url']->toString();
+    }
+  }
+}
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function adminx_element_info_alter(&$type) {
+  // @todo: We require Modernizr for button styling.
+  if (isset($type['button'])) {
+    $type['button']['#attached']['library'][] = 'core/modernizr';
+  }
+}
+
+
+/**
+ * Implements hook_preprocess_install_page().
+ */
+function adminx_preprocess_install_page(&$variables) {
+  // adminx has custom styling for the install page.
+  $variables['#attached']['library'][] = 'adminx/install-page';
+}
+
+/**
+ * Implements hook_preprocess_maintenance_page().
+ */
+function adminx_preprocess_maintenance_page(&$variables) {
+  // adminx has custom styling for the maintenance page.
+  $variables['#attached']['library'][] = 'adminx/maintenance-page';
+}
+
+/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ *
+ * Changes vertical tabs to container and adds meta information.
+ */
+function adminx_form_node_form_alter(&$form, FormStateInterface $form_state) {
+  /** @var \Drupal\node\NodeInterface $node */
+  $node = $form_state->getFormObject()->getEntity();
+
+  $form['#theme'] = array('node_edit_form');
+  $form['#attached']['library'][] = 'adminx/node-form';
+
+  $form['advanced']['#type'] = 'container';
+  $is_new = !$node->isNew() ? format_date($node->getChangedTime(), 'short') : t('Not saved yet');
+  $form['meta'] = array(
+    '#attributes' => array('class' => array('entity-meta__header')),
+    '#type' => 'container',
+    '#group' => 'advanced',
+    '#weight' => -100,
+    'published' => array(
+      '#type' => 'html_tag',
+      '#tag' => 'h3',
+      '#value' => $node->isPublished() ? t('Published') : t('Not published'),
+      '#access' => !$node->isNew(),
+      '#attributes' => array(
+        'class' => 'entity-meta__title',
+      ),
+    ),
+    'changed' => array(
+      '#type' => 'item',
+      '#wrapper_attributes' => array('class' => array('entity-meta__last-saved', 'container-inline')),
+      '#markup' => '<h4 class="label inline">' . t('Last saved') . '</h4> ' . $is_new,
+    ),
+    'author' => array(
+      '#type' => 'item',
+      '#wrapper_attributes' => array('class' => array('author', 'container-inline')),
+      '#markup' => '<h4 class="label inline">' . t('Author') . '</h4> ' . $node->getOwner()->getUsername(),
+    ),
+  );
+  $form['revision_information']['#type'] = 'container';
+  $form['revision_information']['#group'] = 'meta';
 }
 
 /**

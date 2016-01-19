@@ -1,6 +1,6 @@
 name: Adminx
 type: theme
-base theme: seven
+base theme: classy
 description: Administration theme based on material design styles.
 core: 8.x
 
@@ -14,6 +14,28 @@ libraries-override:
     css:
       theme:
         css/views_ui.admin.theme.css: false
+  core/drupal.vertical-tabs:
+    css:
+      component:
+        misc/vertical-tabs.css: false
+  core/jquery.ui:
+    css:
+      theme:
+        assets/vendor/jquery.ui/themes/base/theme.css: false
+  core/jquery.ui.dialog:
+    css:
+      component:
+        assets/vendor/jquery.ui/themes/base/dialog.css: false
+  classy/dialog:
+    adminx/adminx.drupal.dialog
+
+libraries-extend:
+  core/drupal.vertical-tabs:
+    - adminx/vertical-tabs
+  core/jquery.ui:
+    - adminx/adminx.jquery.ui
+quickedit_stylesheets:
+  - assets/css/components/quickedit.css
 
 stylesheets-remove:
  - '@classy/css/components/buttons.css'
@@ -21,14 +43,6 @@ stylesheets-remove:
  - '@classy/css/components/content-header.css'
  - '@classy/css/components/form.css'
  - '@classy/css/components/tabs.css'
- - '@seven/css/components/buttons.css'
- - '@seven/css/components/breadcrumb.css'
- - '@seven/css/components/content-header.css'
- - '@seven/css/components/dropbutton.component.css'
- - '@seven/css/base/elements.css'
- - '@seven/css/components/form.css'
- - '@seven/css/components/tables.css'
- - '@seven/css/components/tabs.css'
 
 #---------------- R E G I O N S -------------------
 

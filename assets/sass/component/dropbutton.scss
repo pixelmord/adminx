@@ -32,7 +32,7 @@
 }
 
 /**
- * Overwrite Sevens button styling.
+ * @todo: Overwrite Sevens button styling.
  */
 .js .dropbutton-widget .button {
   background: transparent;
@@ -152,10 +152,6 @@
   border-top: 1px solid #bfbfba;
 }
 
-/**
- * Rare instances when a dropbutton is actually just a button.
- * Copied from Seven's buttons.css.
- */
 .dropbutton-single .dropbutton-widget {
   border: 0;
   position: static;

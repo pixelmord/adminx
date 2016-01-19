@@ -15,19 +15,53 @@ global-styling:
 
       assets/css/component/details.css: {}
 
+      assets/css/component/dialog.css: {}
+
       assets/css/component/dropbutton.css: {}
 
+      assets/css/component/field-ui.css: {}
+
       assets/css/component/form.css: {}
+
+      assets/css/component/help.css: {}
 
       assets/css/component/ief-form.css: {}
 
       assets/css/component/inline-form.css: {}
 
+      assets/css/component/menus-and-lists.css: {}
+
+      assets/css/component/messages.css: {}
+
+      assets/css/component/modules-page.css: {}
+
+      assets/css/component/node.css: {}
+
+      assets/css/component/page-title.css: {}
+
+      assets/css/component/pager.css: {}
+
+      assets/css/component/panel.css: {}
+
+      assets/css/component/quickedit.css: {}
+
+      assets/css/component/search-admin-settings.css: {}
+
+      assets/css/component/skip-link.css: {}
+
+      assets/css/component/system-status-report.css: {}
+
       assets/css/component/tabledrag.css: {}
 
       assets/css/component/tables.css: {}
 
+      assets/css/component/tablesort-indicator.css: {}
+
       assets/css/component/tabs.css: {}
+
+      assets/css/component/tour.theme.css: {}
+
+      assets/css/component/vertical-tabs.css: {}
 
       assets/css/component/views-ui.css: {}
 
@@ -35,11 +69,66 @@ global-styling:
 
       assets/css/component/views_ui.css: {}
 
+      assets/css/component/jquery.ui/theme.css: {}
+
+      assets/css/component/jquery.ui/theme_scsslint_tmp3408353008261908709.css: {}
+
       # endinject #
     layout:
-      assets/css/layout.css: {}
+      assets/css/layout/layout.css: {}
     theme:
       assets/css/theme.css: {}
   js:
     assets/js/material-drupal-fixes.js: {}
     assets/js/material.js: {}
+
+node-form:
+  css:
+    layout:
+      assets/css/layout/node-add.css: {}
+  dependencies:
+    - node/form
+
+maintenance-page:
+  js:
+    assets/js/mobile.install.js: {}
+  css:
+    theme:
+      assets/css/theme/maintenance-page.css: {}
+  dependencies:
+    - system/maintenance
+    - adminx/global-styling
+
+install-page:
+  js:
+    js/mobile.install.js: {}
+  css:
+    theme:
+      assets/css/theme/install-page.css: {}
+  dependencies:
+    - adminx/maintenance-page
+
+drupal.nav-tabs:
+  js:
+    assets/js/nav-tabs.js: {}
+  dependencies:
+    - core/matchmedia
+    - core/jquery
+    - core/drupal
+    - core/jquery.once
+    - core/drupal.debounce
+
+vertical-tabs:
+  css:
+    component:
+      assets/css/components/vertical-tabs.css: {}
+
+adminx.jquery.ui:
+  css:
+    component:
+      assets/css/components/jquery.ui/theme.css: { weight: -1 }
+
+adminx.drupal.dialog:
+  css:
+    theme:
+      assets/css/components/dialog.css: {}

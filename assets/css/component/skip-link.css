@@ -1,0 +1,24 @@
+/**
+ * @file
+ * Skip link
+ *
+ * Allows keyboard users to quickly skip to the main content of the page.
+ */
+.skip-link {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  z-index: 50;
+  background: #444;
+  color: #fff;
+  font-size: 0.94em;
+  padding: 1px 10px 2px;
+  border-radius: 0 0 10px 10px; }
+
+.skip-link:focus {
+  text-decoration: none; }
+
+.skip-link.visually-hidden.focusable:focus {
+  position: absolute !important; }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNraXAtbGluay5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7O0dBS0c7QUFDSDtFQUNFLFVBQVU7RUFDVixvQ0FBb0M7RUFFcEMsNEJBQTRCO0VBQzVCLFlBQVk7RUFDWixpQkFBaUI7RUFDakIsWUFBWTtFQUNaLGtCQUFrQjtFQUNsQixzQkFBc0I7RUFDdEIsNkJBQTZCLEVBQUU7O0FBRWpDO0VBQ0Usc0JBQXNCLEVBQUU7O0FBRTFCO0VBQ0UsOEJBQThCLEVBQUUiLCJmaWxlIjoiY29tcG9uZW50L3NraXAtbGluay5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIEBmaWxlXG4gKiBTa2lwIGxpbmtcbiAqXG4gKiBBbGxvd3Mga2V5Ym9hcmQgdXNlcnMgdG8gcXVpY2tseSBza2lwIHRvIHRoZSBtYWluIGNvbnRlbnQgb2YgdGhlIHBhZ2UuXG4gKi9cbi5za2lwLWxpbmsge1xuICBsZWZ0OiA1MCU7XG4gIC13ZWJraXQtdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpO1xuICAtbXMtdHJhbnNmb3JtOiB0cmFuc2xhdGVYKC01MCUpO1xuICB0cmFuc2Zvcm06IHRyYW5zbGF0ZVgoLTUwJSk7XG4gIHotaW5kZXg6IDUwO1xuICBiYWNrZ3JvdW5kOiAjNDQ0O1xuICBjb2xvcjogI2ZmZjtcbiAgZm9udC1zaXplOiAwLjk0ZW07XG4gIHBhZGRpbmc6IDFweCAxMHB4IDJweDtcbiAgYm9yZGVyLXJhZGl1czogMCAwIDEwcHggMTBweDsgfVxuXG4uc2tpcC1saW5rOmZvY3VzIHtcbiAgdGV4dC1kZWNvcmF0aW9uOiBub25lOyB9XG5cbi5za2lwLWxpbmsudmlzdWFsbHktaGlkZGVuLmZvY3VzYWJsZTpmb2N1cyB7XG4gIHBvc2l0aW9uOiBhYnNvbHV0ZSAhaW1wb3J0YW50OyB9XG4iXSwic291cmNlUm9vdCI6Ii9zb3VyY2UvIn0= */
