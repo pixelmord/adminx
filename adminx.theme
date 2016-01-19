@@ -8,7 +8,7 @@
  */
 function adminx_preprocess_menu_local_task(&$variables) {
   $variables['link']['#options']['attributes']['class'][] = 'tabs__tab';
-  if ($variables['element']['#active'] == TRUE) {
+  if (isset($variables['element']['#active']) && $variables['element']['#active'] == TRUE) {
     $variables['link']['#options']['attributes']['class'][] = 'is-active';
   }
 }
