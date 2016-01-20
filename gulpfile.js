@@ -22,6 +22,12 @@ gulp.task('build', [
   'svg-stack'
 ]);
 
+gulp.task('build-production', [
+  'sass-production',
+  'css-inject',
+  'svg-stack'
+]);
+
 gulp.task('watch', [
   'sass-watch',
   'lint-browser-watch',

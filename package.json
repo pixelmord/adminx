@@ -19,5 +19,7 @@
     "postinstall": "find node_modules/ -name '*.info' -type f -delete"
   },
   "author": "Andreas Sahle <andreas.sahle@wunderkraut.com>",
-  "license": "GPL-2.0"
+  "license": "GPL-2.0",
+  "dependencies": {
+  }
 }
