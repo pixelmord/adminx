@@ -12,6 +12,6 @@ echo "Theme: Installing local dependencies."
 npm install
 
 echo "Theme: Compiling CSS."
-gulp build
+gulp build-production
 
 echo "Theme: Done."
