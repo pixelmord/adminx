@@ -3,38 +3,47 @@
  * Visual styles for inline forms.
  */
 
-.form--inline .form-item {
-  float: left; /* LTR */
-  margin-right: 0.5em; /* LTR */
-}
-[dir="rtl"] .form--inline .form-item {
-  float: right;
-  margin-right: 0;
-  margin-left: 0.5em;
-}
-.form--inline .form-item-separator {
-  margin-top: 2.3em;
-  margin-right: 1em; /* LTR */
-  margin-left: 0.5em; /* LTR */
-}
-[dir="rtl"] .form--inline .form-item-separator {
-  margin-right: 0.5em;
-  margin-left: 1em;
-}
-.form--inline .form-actions {
-  clear: left; /* LTR */
-}
-[dir="rtl"] .form--inline .form-actions {
-  clear: right;
-}
-
-.form--inline .mdl-textfield--floating-label {
-  margin-top: 20px;
-}
-
-.views-exposed-form {
-  .form--inline .form-actions {
-    clear: none;
-    margin-top:  31px;
+.form--inline {
+  .form-item {
+    float: left; /* LTR */
+    margin-right: 0.5em; /* LTR */
+    position: relative;
   }
+  .form-item-separator {
+    margin-top: 2.3em;
+    margin-right: 1em; /* LTR */
+    margin-left: 0.5em; /* LTR */
+  }
+  .form-actions {
+    clear: left; /* LTR */
+  }
+}
+[dir="rtl"] .form--inline {
+  .form-item {
+    float: right;
+    margin-right: 0;
+    margin-left: 0.5em;
+  }
+  .form-item-separator {
+    margin-right: 0.5em;
+    margin-left: 1em;
+  }
+  .form-actions {
+    clear: right;
+  }
+
+}
+
+.form--inline {
+  .mdl-textfield--floating-label {
+    margin-top: 14px;
+    &.is-focused .mdl-textfield__label,
+    &.is-dirty .mdl-textfield__label {
+      top: -3px;
+    }
+  }
+}
+.form--inline-actions .form-actions {
+  clear: none;
+  margin-top:  26px;
 }

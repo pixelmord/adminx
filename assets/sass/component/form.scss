@@ -85,11 +85,14 @@ form {
   padding: 0;
 }
 
+.label,
 label {
   display: table;
   margin: 0 0 0.1em;
   padding: 0;
-  font-weight: bold;
+  font-weight: 400;
+  color: $label-color;
+  font-size: $input-text-floating-label-fontsize;
 
   &.mdl-textfield__label,
   &.mdl-checkbox,
@@ -102,10 +105,10 @@ label {
     font-weight: normal;
   }
 }
-.mdl-textfield__label {
+.mdl-textfield--floating-label .mdl-textfield__label {
   margin: 0;
-  font-size: 12px !important;
   color: $label-color-muted;
+  font-size: $input-text-floating-label-fontsize !important;
 }
 label.error {
   color: #a51b00;

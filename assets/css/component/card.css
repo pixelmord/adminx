@@ -1,0 +1,145 @@
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/*------------------------------------*    $CONTENTS
+\*------------------------------------*/
+/**
+ * STYLE GUIDE VARIABLES------------------Declarations of Sass variables
+ * -----Typography
+ * -----Colors
+ * -----Textfield
+ * -----Switch
+ * -----Spinner
+ * -----Radio
+ * -----Menu
+ * -----List
+ * -----Layout
+ * -----Icon toggles
+ * -----Footer
+ * -----Column
+ * -----Checkbox
+ * -----Card
+ * -----Button
+ * -----Animation
+ * -----Progress
+ * -----Badge
+ * -----Shadows
+ * -----Grid
+ * -----Data table
+ */
+/* ==========  TYPOGRAPHY  ========== */
+/* We're splitting fonts into "preferred" and "performance" in order to optimize
+   page loading. For important text, such as the body, we want it to load
+   immediately and not wait for the web font load, whereas for other sections,
+   such as headers and titles, we're OK with things taking a bit longer to load.
+   We do have some optional classes and parameters in the mixins, in case you
+   definitely want to make sure you're using the preferred font and don't mind
+   the performance hit.
+   We should be able to improve on this once CSS Font Loading L3 becomes more
+   widely available.
+*/
+/* ==========  COLORS  ========== */
+/**
+*
+* Material design color palettes.
+* @see http://www.google.com/design/spec/style/color.html
+*
+**/
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* ==========  Color Palettes  ========== */
+/* colors.scss */
+/**
+ * Copyright 2015 Google Inc. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+/* ==========  IMAGES  ========== */
+/* ==========  Color & Themes  ========== */
+/* ==========  Typography  ========== */
+/* ==========  Components  ========== */
+/* ==========  Standard Buttons  ========== */
+/* ==========  Icon Toggles  ========== */
+/* ==========  Radio Buttons  ========== */
+/* ==========  Ripple effect  ========== */
+/* ==========  Layout  ========== */
+/* ==========  Content Tabs  ========== */
+/* ==========  Checkboxes  ========== */
+/* ==========  Switches  ========== */
+/* ==========  Spinner  ========== */
+/* ==========  Text fields  ========== */
+/* ==========  Card  ========== */
+/* ==========  Sliders ========== */
+/* ========== Progress ========== */
+/* ==========  List ========== */
+/* ==========  Item ========== */
+/* ==========  Dropdown menu ========== */
+/* ==========  Tooltips  ========== */
+/* ==========  Footer  ========== */
+/* TEXTFIELD */
+/* SWITCH */
+/* SPINNER */
+/* RADIO */
+/* MENU */
+/* LIST */
+/* LAYOUT */
+/* ICON TOGGLE */
+/* FOOTER */
+/*mega-footer*/
+/*mini-footer*/
+/* CHECKBOX */
+/* CARD */
+/* Card dimensions */
+/* Cover image */
+/* BUTTON */
+/**
+ *
+ * Dimensions
+ *
+ */
+/* ANIMATION */
+/* PROGRESS */
+/* BADGE */
+/* SHADOWS */
+/* GRID */
+/* DATA TABLE */
+/* TOOLTIP */
+.mdl-card--colored {
+  background: rgb(227,242,253); }
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNhcmQuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBOzs7Ozs7Ozs7Ozs7OztHQWNHO0FBQ0g7d0NBQ3dDO0FBQ3hDOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztHQXVCRztBQUNILHdDQUF3QztBQUN4Qzs7Ozs7Ozs7O0VBU0U7QUFDRixvQ0FBb0M7QUFDcEM7Ozs7O0dBS0c7QUFDSDs7Ozs7Ozs7Ozs7Ozs7R0FjRztBQUNILDRDQUE0QztBQUM1QyxpQkFBaUI7QUFDakI7Ozs7Ozs7Ozs7Ozs7O0dBY0c7QUFDSCxvQ0FBb0M7QUFDcEMsNENBQTRDO0FBQzVDLHdDQUF3QztBQUN4Qyx3Q0FBd0M7QUFDeEMsOENBQThDO0FBQzlDLDBDQUEwQztBQUMxQywyQ0FBMkM7QUFDM0MsMkNBQTJDO0FBQzNDLG9DQUFvQztBQUNwQywwQ0FBMEM7QUFDMUMsd0NBQXdDO0FBQ3hDLHNDQUFzQztBQUN0QyxxQ0FBcUM7QUFDckMseUNBQXlDO0FBQ3pDLGtDQUFrQztBQUNsQyxvQ0FBb0M7QUFDcEMsb0NBQW9DO0FBQ3BDLGlDQUFpQztBQUNqQyxpQ0FBaUM7QUFDakMsMENBQTBDO0FBQzFDLHNDQUFzQztBQUN0QyxvQ0FBb0M7QUFDcEMsZUFBZTtBQUNmLFlBQVk7QUFDWixhQUFhO0FBQ2IsV0FBVztBQUNYLFVBQVU7QUFDVixVQUFVO0FBQ1YsWUFBWTtBQUNaLGlCQUFpQjtBQUNqQixZQUFZO0FBQ1osZUFBZTtBQUNmLGVBQWU7QUFDZixjQUFjO0FBQ2QsVUFBVTtBQUNWLHFCQUFxQjtBQUNyQixpQkFBaUI7QUFDakIsWUFBWTtBQUNaOzs7O0dBSUc7QUFDSCxlQUFlO0FBQ2YsY0FBYztBQUNkLFdBQVc7QUFDWCxhQUFhO0FBQ2IsVUFBVTtBQUNWLGdCQUFnQjtBQUNoQixhQUFhO0FBQ2I7RUFDRSw2QkFBNkIsRUFBRSIsImZpbGUiOiJjb21wb25lbnQvY2FyZC5jc3MiLCJzb3VyY2VzQ29udGVudCI6WyIvKipcbiAqIENvcHlyaWdodCAyMDE1IEdvb2dsZSBJbmMuIEFsbCBSaWdodHMgUmVzZXJ2ZWQuXG4gKlxuICogTGljZW5zZWQgdW5kZXIgdGhlIEFwYWNoZSBMaWNlbnNlLCBWZXJzaW9uIDIuMCAodGhlIFwiTGljZW5zZVwiKTtcbiAqIHlvdSBtYXkgbm90IHVzZSB0aGlzIGZpbGUgZXhjZXB0IGluIGNvbXBsaWFuY2Ugd2l0aCB0aGUgTGljZW5zZS5cbiAqIFlvdSBtYXkgb2J0YWluIGEgY29weSBvZiB0aGUgTGljZW5zZSBhdFxuICpcbiAqICAgICAgaHR0cDovL3d3dy5hcGFjaGUub3JnL2xpY2Vuc2VzL0xJQ0VOU0UtMi4wXG4gKlxuICogVW5sZXNzIHJlcXVpcmVkIGJ5IGFwcGxpY2FibGUgbGF3IG9yIGFncmVlZCB0byBpbiB3cml0aW5nLCBzb2Z0d2FyZVxuICogZGlzdHJpYnV0ZWQgdW5kZXIgdGhlIExpY2Vuc2UgaXMgZGlzdHJpYnV0ZWQgb24gYW4gXCJBUyBJU1wiIEJBU0lTLFxuICogV0lUSE9VVCBXQVJSQU5USUVTIE9SIENPTkRJVElPTlMgT0YgQU5ZIEtJTkQsIGVpdGhlciBleHByZXNzIG9yIGltcGxpZWQuXG4gKiBTZWUgdGhlIExpY2Vuc2UgZm9yIHRoZSBzcGVjaWZpYyBsYW5ndWFnZSBnb3Zlcm5pbmcgcGVybWlzc2lvbnMgYW5kXG4gKiBsaW1pdGF0aW9ucyB1bmRlciB0aGUgTGljZW5zZS5cbiAqL1xuLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qICAgICRDT05URU5UU1xuXFwqLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi9cbi8qKlxuICogU1RZTEUgR1VJREUgVkFSSUFCTEVTLS0tLS0tLS0tLS0tLS0tLS0tRGVjbGFyYXRpb25zIG9mIFNhc3MgdmFyaWFibGVzXG4gKiAtLS0tLVR5cG9ncmFwaHlcbiAqIC0tLS0tQ29sb3JzXG4gKiAtLS0tLVRleHRmaWVsZFxuICogLS0tLS1Td2l0Y2hcbiAqIC0tLS0tU3Bpbm5lclxuICogLS0tLS1SYWRpb1xuICogLS0tLS1NZW51XG4gKiAtLS0tLUxpc3RcbiAqIC0tLS0tTGF5b3V0XG4gKiAtLS0tLUljb24gdG9nZ2xlc1xuICogLS0tLS1Gb290ZXJcbiAqIC0tLS0tQ29sdW1uXG4gKiAtLS0tLUNoZWNrYm94XG4gKiAtLS0tLUNhcmRcbiAqIC0tLS0tQnV0dG9uXG4gKiAtLS0tLUFuaW1hdGlvblxuICogLS0tLS1Qcm9ncmVzc1xuICogLS0tLS1CYWRnZVxuICogLS0tLS1TaGFkb3dzXG4gKiAtLS0tLUdyaWRcbiAqIC0tLS0tRGF0YSB0YWJsZVxuICovXG4vKiA9PT09PT09PT09ICBUWVBPR1JBUEhZICA9PT09PT09PT09ICovXG4vKiBXZSdyZSBzcGxpdHRpbmcgZm9udHMgaW50byBcInByZWZlcnJlZFwiIGFuZCBcInBlcmZvcm1hbmNlXCIgaW4gb3JkZXIgdG8gb3B0aW1pemVcbiAgIHBhZ2UgbG9hZGluZy4gRm9yIGltcG9ydGFudCB0ZXh0LCBzdWNoIGFzIHRoZSBib2R5LCB3ZSB3YW50IGl0IHRvIGxvYWRcbiAgIGltbWVkaWF0ZWx5IGFuZCBub3Qgd2FpdCBmb3IgdGhlIHdlYiBmb250IGxvYWQsIHdoZXJlYXMgZm9yIG90aGVyIHNlY3Rpb25zLFxuICAgc3VjaCBhcyBoZWFkZXJzIGFuZCB0aXRsZXMsIHdlJ3JlIE9LIHdpdGggdGhpbmdzIHRha2luZyBhIGJpdCBsb25nZXIgdG8gbG9hZC5cbiAgIFdlIGRvIGhhdmUgc29tZSBvcHRpb25hbCBjbGFzc2VzIGFuZCBwYXJhbWV0ZXJzIGluIHRoZSBtaXhpbnMsIGluIGNhc2UgeW91XG4gICBkZWZpbml0ZWx5IHdhbnQgdG8gbWFrZSBzdXJlIHlvdSdyZSB1c2luZyB0aGUgcHJlZmVycmVkIGZvbnQgYW5kIGRvbid0IG1pbmRcbiAgIHRoZSBwZXJmb3JtYW5jZSBoaXQuXG4gICBXZSBzaG91bGQgYmUgYWJsZSB0byBpbXByb3ZlIG9uIHRoaXMgb25jZSBDU1MgRm9udCBMb2FkaW5nIEwzIGJlY29tZXMgbW9yZVxuICAgd2lkZWx5IGF2YWlsYWJsZS5cbiovXG4vKiA9PT09PT09PT09ICBDT0xPUlMgID09PT09PT09PT0gKi9cbi8qKlxuKlxuKiBNYXRlcmlhbCBkZXNpZ24gY29sb3IgcGFsZXR0ZXMuXG4qIEBzZWUgaHR0cDovL3d3dy5nb29nbGUuY29tL2Rlc2lnbi9zcGVjL3N0eWxlL2NvbG9yLmh0bWxcbipcbioqL1xuLyoqXG4gKiBDb3B5cmlnaHQgMjAxNSBHb29nbGUgSW5jLiBBbGwgUmlnaHRzIFJlc2VydmVkLlxuICpcbiAqIExpY2Vuc2VkIHVuZGVyIHRoZSBBcGFjaGUgTGljZW5zZSwgVmVyc2lvbiAyLjAgKHRoZSBcIkxpY2Vuc2VcIik7XG4gKiB5b3UgbWF5IG5vdCB1c2UgdGhpcyBmaWxlIGV4Y2VwdCBpbiBjb21wbGlhbmNlIHdpdGggdGhlIExpY2Vuc2UuXG4gKiBZb3UgbWF5IG9idGFpbiBhIGNvcHkgb2YgdGhlIExpY2Vuc2UgYXRcbiAqXG4gKiAgICAgIGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy9MSUNFTlNFLTIuMFxuICpcbiAqIFVubGVzcyByZXF1aXJlZCBieSBhcHBsaWNhYmxlIGxhdyBvciBhZ3JlZWQgdG8gaW4gd3JpdGluZywgc29mdHdhcmVcbiAqIGRpc3RyaWJ1dGVkIHVuZGVyIHRoZSBMaWNlbnNlIGlzIGRpc3RyaWJ1dGVkIG9uIGFuIFwiQVMgSVNcIiBCQVNJUyxcbiAqIFdJVEhPVVQgV0FSUkFOVElFUyBPUiBDT05ESVRJT05TIE9GIEFOWSBLSU5ELCBlaXRoZXIgZXhwcmVzcyBvciBpbXBsaWVkLlxuICogU2VlIHRoZSBMaWNlbnNlIGZvciB0aGUgc3BlY2lmaWMgbGFuZ3VhZ2UgZ292ZXJuaW5nIHBlcm1pc3Npb25zIGFuZFxuICogbGltaXRhdGlvbnMgdW5kZXIgdGhlIExpY2Vuc2UuXG4gKi9cbi8qID09PT09PT09PT0gIENvbG9yIFBhbGV0dGVzICA9PT09PT09PT09ICovXG4vKiBjb2xvcnMuc2NzcyAqL1xuLyoqXG4gKiBDb3B5cmlnaHQgMjAxNSBHb29nbGUgSW5jLiBBbGwgUmlnaHRzIFJlc2VydmVkLlxuICpcbiAqIExpY2Vuc2VkIHVuZGVyIHRoZSBBcGFjaGUgTGljZW5zZSwgVmVyc2lvbiAyLjAgKHRoZSBcIkxpY2Vuc2VcIik7XG4gKiB5b3UgbWF5IG5vdCB1c2UgdGhpcyBmaWxlIGV4Y2VwdCBpbiBjb21wbGlhbmNlIHdpdGggdGhlIExpY2Vuc2UuXG4gKiBZb3UgbWF5IG9idGFpbiBhIGNvcHkgb2YgdGhlIExpY2Vuc2UgYXRcbiAqXG4gKiAgICAgIGh0dHA6Ly93d3cuYXBhY2hlLm9yZy9saWNlbnNlcy9MSUNFTlNFLTIuMFxuICpcbiAqIFVubGVzcyByZXF1aXJlZCBieSBhcHBsaWNhYmxlIGxhdyBvciBhZ3JlZWQgdG8gaW4gd3JpdGluZywgc29mdHdhcmVcbiAqIGRpc3RyaWJ1dGVkIHVuZGVyIHRoZSBMaWNlbnNlIGlzIGRpc3RyaWJ1dGVkIG9uIGFuIFwiQVMgSVNcIiBCQVNJUyxcbiAqIFdJVEhPVVQgV0FSUkFOVElFUyBPUiBDT05ESVRJT05TIE9GIEFOWSBLSU5ELCBlaXRoZXIgZXhwcmVzcyBvciBpbXBsaWVkLlxuICogU2VlIHRoZSBMaWNlbnNlIGZvciB0aGUgc3BlY2lmaWMgbGFuZ3VhZ2UgZ292ZXJuaW5nIHBlcm1pc3Npb25zIGFuZFxuICogbGltaXRhdGlvbnMgdW5kZXIgdGhlIExpY2Vuc2UuXG4gKi9cbi8qID09PT09PT09PT0gIElNQUdFUyAgPT09PT09PT09PSAqL1xuLyogPT09PT09PT09PSAgQ29sb3IgJiBUaGVtZXMgID09PT09PT09PT0gKi9cbi8qID09PT09PT09PT0gIFR5cG9ncmFwaHkgID09PT09PT09PT0gKi9cbi8qID09PT09PT09PT0gIENvbXBvbmVudHMgID09PT09PT09PT0gKi9cbi8qID09PT09PT09PT0gIFN0YW5kYXJkIEJ1dHRvbnMgID09PT09PT09PT0gKi9cbi8qID09PT09PT09PT0gIEljb24gVG9nZ2xlcyAgPT09PT09PT09PSAqL1xuLyogPT09PT09PT09PSAgUmFkaW8gQnV0dG9ucyAgPT09PT09PT09PSAqL1xuLyogPT09PT09PT09PSAgUmlwcGxlIGVmZmVjdCAgPT09PT09PT09PSAqL1xuLyogPT09PT09PT09PSAgTGF5b3V0ICA9PT09PT09PT09ICovXG4vKiA9PT09PT09PT09ICBDb250ZW50IFRhYnMgID09PT09PT09PT0gKi9cbi8qID09PT09PT09PT0gIENoZWNrYm94ZXMgID09PT09PT09PT0gKi9cbi8qID09PT09PT09PT0gIFN3aXRjaGVzICA9PT09PT09PT09ICovXG4vKiA9PT09PT09PT09ICBTcGlubmVyICA9PT09PT09PT09ICovXG4vKiA9PT09PT09PT09ICBUZXh0IGZpZWxkcyAgPT09PT09PT09PSAqL1xuLyogPT09PT09PT09PSAgQ2FyZCAgPT09PT09PT09PSAqL1xuLyogPT09PT09PT09PSAgU2xpZGVycyA9PT09PT09PT09ICovXG4vKiA9PT09PT09PT09IFByb2dyZXNzID09PT09PT09PT0gKi9cbi8qID09PT09PT09PT0gIExpc3QgPT09PT09PT09PSAqL1xuLyogPT09PT09PT09PSAgSXRlbSA9PT09PT09PT09ICovXG4vKiA9PT09PT09PT09ICBEcm9wZG93biBtZW51ID09PT09PT09PT0gKi9cbi8qID09PT09PT09PT0gIFRvb2x0aXBzICA9PT09PT09PT09ICovXG4vKiA9PT09PT09PT09ICBGb290ZXIgID09PT09PT09PT0gKi9cbi8qIFRFWFRGSUVMRCAqL1xuLyogU1dJVENIICovXG4vKiBTUElOTkVSICovXG4vKiBSQURJTyAqL1xuLyogTUVOVSAqL1xuLyogTElTVCAqL1xuLyogTEFZT1VUICovXG4vKiBJQ09OIFRPR0dMRSAqL1xuLyogRk9PVEVSICovXG4vKm1lZ2EtZm9vdGVyKi9cbi8qbWluaS1mb290ZXIqL1xuLyogQ0hFQ0tCT1ggKi9cbi8qIENBUkQgKi9cbi8qIENhcmQgZGltZW5zaW9ucyAqL1xuLyogQ292ZXIgaW1hZ2UgKi9cbi8qIEJVVFRPTiAqL1xuLyoqXG4gKlxuICogRGltZW5zaW9uc1xuICpcbiAqL1xuLyogQU5JTUFUSU9OICovXG4vKiBQUk9HUkVTUyAqL1xuLyogQkFER0UgKi9cbi8qIFNIQURPV1MgKi9cbi8qIEdSSUQgKi9cbi8qIERBVEEgVEFCTEUgKi9cbi8qIFRPT0xUSVAgKi9cbi5tZGwtY2FyZC0tY29sb3JlZCB7XG4gIGJhY2tncm91bmQ6IHJnYigyMjcsMjQyLDI1Myk7IH1cbiJdLCJzb3VyY2VSb290IjoiL3NvdXJjZS8ifQ== */

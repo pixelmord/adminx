@@ -9,6 +9,8 @@ global-styling:
 
       assets/css/component/breadcrumbs.css: {}
 
+      assets/css/component/card.css: {}
+
       assets/css/component/container-inline.css: {}
 
       assets/css/component/content-header.css: {}
@@ -18,6 +20,8 @@ global-styling:
       assets/css/component/dialog.css: {}
 
       assets/css/component/dropbutton.css: {}
+
+      assets/css/component/entity-meta.css: {}
 
       assets/css/component/field-ui.css: {}
 
@@ -67,11 +71,7 @@ global-styling:
 
       assets/css/component/views_ui.admin.theme.css: {}
 
-      assets/css/component/views_ui.css: {}
-
       assets/css/component/jquery.ui/theme.css: {}
-
-      assets/css/component/jquery.ui/theme_scsslint_tmp3408353008261908709.css: {}
 
       # endinject #
     layout:
@@ -121,14 +121,14 @@ drupal.nav-tabs:
 vertical-tabs:
   css:
     component:
-      assets/css/components/vertical-tabs.css: {}
+      assets/css/component/vertical-tabs.css: {}
 
 adminx.jquery.ui:
   css:
     component:
-      assets/css/components/jquery.ui/theme.css: { weight: -1 }
+      assets/css/component/jquery.ui/theme.css: { weight: -1 }
 
 adminx.drupal.dialog:
   css:
     theme:
-      assets/css/components/dialog.css: {}
+      assets/css/component/dialog.css: {}

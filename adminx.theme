@@ -213,6 +213,22 @@ function adminx_form_node_form_alter(&$form, FormStateInterface $form_state) {
 }
 
 /**
+ * Implements hook_form_alter().
+ *
+ */
+function adminx_form_alter(&$form, FormStateInterface $form_state) {
+  $form = $form;
+  if (isset($form['header']['node_bulk_form'])) {
+    $form['header']['#attributes']['class'][] = 'view__header';
+    $form['header']['#attributes']['class'][] = 'mdl-card';
+    $form['header']['#attributes']['class'][] = 'mdl-shadow--2dp';
+    $form['header']['node_bulk_form']['#attributes']['class'][] = 'form--inline';
+    $form['header']['node_bulk_form']['#attributes']['class'][] = 'form--inline-actions';
+    $form['header']['node_bulk_form']['#attributes']['class'][] = 'mdl-card__supporting-text';
+    $form['header']['node_bulk_form']['#attributes']['class'][] = 'clearfix';
+  }
+}
+/**
  * Implements hook_theme_suggestions_HOOK_alter().
  *
  * @param array $variables
@@ -247,11 +263,10 @@ function adminx_preprocess_input__submit(&$variables) {
   if (isset($variables['element']['#ief_form']) && $variables['element']['#ief_form'] == 'add') {
     $variables['element']['#button_type'] = 'primary';
   }
-  $parents = $variables['element']['#parents'];
-  if(isset($parents) && in_array('ief_add_save', $parents, TRUE)) {
+  if(isset($variables['element']['#parents']) && in_array('ief_add_save', $variables['element']['#parents'], TRUE)) {
     $variables['element']['#button_type'] = 'primary';
   }
-  if(isset($parents) && in_array('remove_button', $parents, TRUE)) {
+  if(isset($variables['element']['#parents']) && in_array('remove_button', $variables['element']['#parents'], TRUE)) {
     $variables['element']['#button_type'] = 'danger';
   }
 }

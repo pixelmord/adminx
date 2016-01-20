@@ -1,5 +1,18 @@
+@import '../config';
+
 .views-query-info table {
    border-radius: 0;
   -webkit-border-horizontal-spacing: 0px;
   -webkit-border-vertical-spacing: 0px;
+}
+.view__header,
+.view-filters {
+  &.mdl-card {
+    width: 100%;
+    min-height: 0;
+  }
+}
+
+.view-filters {
+  margin-bottom: 2em;
 }

@@ -86,6 +86,7 @@ $trim-color-classes: false !default;
 
 // Use color primarily for emphasis. Choose colors that fit with
 // your brand and provide good contrast between visual components.
+$color-primary-light: $palette-blue-50;
 $color-primary: $palette-blue-500;
 $color-primary-dark: $palette-blue-800;
 $color-accent: $palette-light-green-500;
@@ -132,8 +133,8 @@ $fieldset-ief-form-border-color: unquote("rgba(#{$color-primary}, 0.7)") !defaul
 // form
 // -----------------------------------------------------------------------------
 
-$label-color: rgba(19, 44, 93, 0.7);
-$label-color-muted: rgba(127, 165, 195, 0.7);
+$label-color: unquote("rgb(#{$color-primary})");
+$label-color-muted: unquote("rgba(#{$color-primary}, 0.50)");
 
   /* ==========  Standard Buttons  ========== */
 
@@ -261,6 +262,7 @@ $card-text-color: unquote("rgb(#{$color-black})") !default;
 $card-image-placeholder-color: unquote("rgb(#{$color-accent})") !default;
 $card-supporting-text-text-color: unquote("rgba(#{$color-black}, 0.54)") !default;
 $card-border-color: rgba(0,0,0,0.1) !default;
+$card-colored-background-color: unquote("rgb(#{$color-primary-light})");
 
 /* ==========  Sliders ========== */
 
@@ -319,7 +321,7 @@ $input-text-ripple-size: 32px;
 $input-text-vertical-spacing: 20px;
 
 $input-text-button-size: 32px;
-$input-text-floating-label-fontsize: 12px;
+$input-text-floating-label-fontsize: 13px;
 $input-text-expandable-icon-top: 16px;
 
 
