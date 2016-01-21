@@ -2,11 +2,30 @@
 
 fieldset {
   &.ief-form {
-    background: $fieldset-ief-form-bg;
-    padding: 1em !important;
-    box-shadow: inset 0px 0px 5px 1px rgba(43, 48, 74, 0.6);
-    border: 1px solid $fieldset-ief-form-border-color;
+    background: $white;
+    padding: 0 !important;
     border-radius: 0;
+    z-index: 1;
+    &:before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      background: rgba(243, 243, 243, 0.85);
+      width: 5000px;
+      height: 5000px;
+      top: 50%;
+      left: 50%;
+      margin-left: -2500px;
+      margin-top: -2500px;
+    }
+
+    > .fieldset-wrapper {
+      background: white;
+      padding: 1em;
+      border: 1px solid #efefef;
+      box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2);
+    }
+
     fieldset {
       background: transparent;
     }
