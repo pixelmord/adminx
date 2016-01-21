@@ -140,4 +140,4 @@
 /* DATA TABLE */
 /* TOOLTIP */
 .mdl-card--colored {
-  background: rgb(227,242,253); }
+  background: rgba(227,242,253, 0.6) !important; }

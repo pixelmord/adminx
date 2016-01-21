@@ -30,6 +30,7 @@ gulp.task('build-production', [
 
 gulp.task('watch', [
   'sass-watch',
+  'css-inject-watch',
   'lint-browser-watch',
   'svg-stack-watch'
 ]);

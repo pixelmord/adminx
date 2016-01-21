@@ -2,14 +2,15 @@
  * @file
  * Override of misc/vertical-tabs.css.
  */
+@import '../config';
 
 .vertical-tabs {
   position: relative;
   overflow: hidden;
   margin: 10px 0;
   border: 1px solid #bdbdbd;
-  border-radius: 4px;
-  background: #e6e5e1;
+  background-color: #ececec;
+  box-shadow: $base-box-shadow;
 }
 .vertical-tabs__menu {
   float: left; /* LTR */
@@ -17,7 +18,9 @@
   margin: 0 -100% -1px 0; /* LTR */
   padding: 0;
   border-bottom: 1px solid #ccc;
+  border-top: none;
   line-height: 1;
+
 }
 [dir="rtl"] .vertical-tabs__menu {
   float: right;
@@ -25,6 +28,8 @@
 }
 .vertical-tabs__menu-item {
   position: relative;
+  border: none;
+  background: #F7F7F7;
 }
 .vertical-tabs__menu-item.is-selected {
   z-index: 1;
@@ -50,9 +55,9 @@
 }
 .vertical-tabs__menu-item a {
   display: block;
-  padding: 10px 15px 15px;
+  padding: 0.9em 0.9em 0.5em;
   border-bottom: 1px solid #b3b2ad;
-  background-color: #f2f2f0;
+  background-color: #F7F7F7;
   text-shadow: 0 1px hsla(0, 0%, 100%, 0.6);
   text-decoration: none;
 }
@@ -84,6 +89,10 @@
 .vertical-tabs__menu-item.is-selected a:focus {
   color: #007ecc;
 }
+
+.vertical-tabs__menu-item-title {
+  font-weight: 300;
+}
 [data-vertical-tabs-panes] {
   background-color: #fcfcfa;
 }
@@ -107,11 +116,13 @@
   padding: 0;
   border: 0;
   color: #595959;
+  box-shadow: none;
 }
 .vertical-tabs__menu-item-summary {
   display: block;
   padding-top: 0.4em;
-  color: #666;
+  color: $label-color-muted;
+  font-size: $base-font-size * 0.85;
 }
 .vertical-tabs__pane > summary {
   display: none;

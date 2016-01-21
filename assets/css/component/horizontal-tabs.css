@@ -139,19 +139,5 @@
 /* GRID */
 /* DATA TABLE */
 /* TOOLTIP */
-.views-query-info table {
-  border-radius: 0;
-  -webkit-border-horizontal-spacing: 0px;
-  -webkit-border-vertical-spacing: 0px; }
-
-.view__header.mdl-card,
-.view-filters.mdl-card {
-  width: 100%;
-  min-height: 0; }
-
-.view__header {
-  margin-bottom: 0;
-  z-index: 0 !important; }
-
-.view-filters {
-  margin-bottom: 2em; }
+.horizontal-tabs-pane {
+  box-shadow: none; }

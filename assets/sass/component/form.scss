@@ -2,7 +2,8 @@
 
 
 .form-wrapper {
-  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+
 }
 
 .fieldgroup {
@@ -18,7 +19,12 @@ form {
       box-shadow: $base-box-shadow;
       padding: 18px;
       margin-bottom: 1em;
-
+      &:empty {
+        box-shadow: none;
+        padding: 0;
+        border: none;
+        margin: 0;
+      }
       fieldset:not(.fieldgroup) {
         padding: 30px 0 0;
 
@@ -43,16 +49,28 @@ form {
     }
   }
   ul.tips,
-  .description {
+  .description,
+  .details-description {
     margin-top: 1em;
     margin-bottom: 1em;
     color: $form-description-color;
-    font-size: $base-font-size * 0.95;
+    font-size: $base-font-size * 0.85;
     font-weight: 300;
     line-height: 1.4;
     letter-spacing: 0.05em;
-
-
+    text-transform: uppercase;
+    &:before {
+      content: '\2139';
+      font-size: 1.3em;
+      font-weight: bold;
+      color: $input-text-highlight-color;
+      display: inline-block;
+      border: 1px solid $form-description-color;
+      border-radius: 1em;
+      padding: 0 .15em .15em;
+      line-height: .9;
+      margin-right: .2em;
+    }
   }
   .mdl-textfield--floating-label + .description {
     margin-top: -0.5em;
@@ -62,6 +80,7 @@ form {
 
 
 @import 'form__fieldset';
+@import 'form__form-element';
 @import 'form__select';
 @import 'form__buttons';
 
@@ -92,7 +111,7 @@ label {
   padding: 0;
   font-weight: 400;
   color: $label-color;
-  font-size: $input-text-floating-label-fontsize;
+  font-size: $input-text-floating-label-fontsize !important;
 
   &.mdl-textfield__label,
   &.mdl-checkbox,
@@ -103,6 +122,9 @@ label {
   &.mdl-checkbox,
   &.mdl-radio {
     font-weight: normal;
+  }
+  [class$="_label"] {
+    font-size: $input-text-floating-label-fontsize !important;
   }
 }
 .mdl-textfield--floating-label .mdl-textfield__label {

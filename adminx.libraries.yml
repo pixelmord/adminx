@@ -5,6 +5,8 @@ global-styling:
     component:
       # css-components:css #
 
+      assets/css/component/action-links.css: {}
+
       assets/css/component/admin-list.css: {}
 
       assets/css/component/breadcrumbs.css: {}
@@ -28,6 +30,8 @@ global-styling:
       assets/css/component/form.css: {}
 
       assets/css/component/help.css: {}
+
+      assets/css/component/horizontal-tabs.css: {}
 
       assets/css/component/ief-form.css: {}
 
@@ -81,6 +85,10 @@ global-styling:
   js:
     assets/js/material-drupal-fixes.js: {}
     assets/js/material.js: {}
+
+material-design:
+  js:
+    assets/js/material-design-helper.js: {}
 
 node-form:
   css:

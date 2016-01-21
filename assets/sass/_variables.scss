@@ -124,17 +124,19 @@ $text-link-color-hover: unquote("rgba(#{$color-primary}, 0.8)");
 
 $target-elements-directly: false;
 
-/* ==========  Components  ========== */
-$form-description-color: unquote("rgba(#{$color-secondary}, 0.9)");
-$fieldset-ief-form-bg: unquote("rgba(#{$color-primary}, 0.02)") !default;
-$fieldset-ief-form-border-color: unquote("rgba(#{$color-primary}, 0.7)") !default;
+
 
 // -----------------------------------------------------------------------------
 // form
 // -----------------------------------------------------------------------------
 
 $label-color: unquote("rgb(#{$color-primary})");
-$label-color-muted: unquote("rgba(#{$color-primary}, 0.50)");
+$label-color-muted: unquote("rgba(#{$color-primary}, 0.60)");
+
+/* ==========  Components  ========== */
+$form-description-color: $label-color-muted;
+$fieldset-ief-form-bg: unquote("rgba(#{$color-primary}, 0.02)") !default;
+$fieldset-ief-form-border-color: unquote("rgba(#{$color-primary}, 0.7)") !default;
 
   /* ==========  Standard Buttons  ========== */
 
@@ -262,7 +264,7 @@ $card-text-color: unquote("rgb(#{$color-black})") !default;
 $card-image-placeholder-color: unquote("rgb(#{$color-accent})") !default;
 $card-supporting-text-text-color: unquote("rgba(#{$color-black}, 0.54)") !default;
 $card-border-color: rgba(0,0,0,0.1) !default;
-$card-colored-background-color: unquote("rgb(#{$color-primary-light})");
+$card-colored-background-color: unquote("rgba(#{$color-primary-light}, 0.6)");
 
 /* ==========  Sliders ========== */
 
@@ -355,7 +357,7 @@ $spinner-duration: 360 * $spinner-arc-time / (
 
 /* RADIO */
 
-$radio-label-font-size: 16px;
+$radio-label-font-size: 13px;
 $radio-label-height: 24px;
 $radio-button-size: 16px;
 $radio-inner-margin: $radio-button-size / 4;
@@ -429,7 +431,7 @@ $footer-btn-size: 36px !default;
 
 /* CHECKBOX */
 
-$checkbox-label-font-size: 16px;
+$checkbox-label-font-size: 13px;
 $checkbox-label-height: 24px;
 $checkbox-button-size: 16px;
 $checkbox-inner-margin: 2px;

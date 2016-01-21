@@ -53,6 +53,8 @@
     'js-form-item-' ~ name|clean_class,
     'form-item-' ~ name|clean_class,
     title_display not in ['after', 'before'] ? 'form-no-label',
+    suffix is not empty ? 'has-suffix',
+    prefix is not empty ? 'has-prefix',
     disabled == 'disabled' ? 'form-disabled',
     'mdl-textfield',
     'mdl-js-textfield',
@@ -75,7 +77,7 @@
 <div{{ attributes.addClass(classes) }}>
 
   {% if prefix is not empty %}
-    <span class="field-prefix">{{ prefix }}</span>
+    <span class="field__prefix">{{ prefix }}</span>
   {% endif %}
   {% if description_display == 'before' and description.content %}
     <div{{ description.attributes }}>
@@ -84,7 +86,7 @@
   {% endif %}
   {{ children }}
   {% if suffix is not empty %}
-    <span class="field-suffix">{{ suffix }}</span>
+    <span class="field__suffix">{{ suffix }}</span>
   {% endif %}
 
   <label class="{{ labelclass }}" for="{{ attributes.id }}">{{ label }}</label>

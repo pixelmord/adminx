@@ -170,6 +170,26 @@ function adminx_preprocess_maintenance_page(&$variables) {
 }
 
 /**
+ * Implements hook_form_alter().
+ *
+ */
+function adminx_form_alter(&$form, FormStateInterface $form_state) {
+  // Make sure all forms (also such loaded via ajax for example) are MDL
+  // upgraded.
+  $form['#attached']['library'][] = 'adminx/material-design';
+  // Set classes for VBO header.
+  if (isset($form['header']['node_bulk_form'])) {
+    $form['header']['#attributes']['class'][] = 'view__header';
+    $form['header']['#attributes']['class'][] = 'mdl-card';
+    $form['header']['#attributes']['class'][] = 'mdl-shadow--2dp';
+    $form['header']['node_bulk_form']['#attributes']['class'][] = 'form--inline';
+    $form['header']['node_bulk_form']['#attributes']['class'][] = 'form--inline-actions';
+    $form['header']['node_bulk_form']['#attributes']['class'][] = 'mdl-card__supporting-text';
+    $form['header']['node_bulk_form']['#attributes']['class'][] = 'clearfix';
+  }
+}
+
+/**
  * Implements hook_form_BASE_FORM_ID_alter().
  *
  * Changes vertical tabs to container and adds meta information.
@@ -213,21 +233,32 @@ function adminx_form_node_form_alter(&$form, FormStateInterface $form_state) {
 }
 
 /**
- * Implements hook_form_alter().
+ * Implements hook_inline_entity_form_reference_form_alter().
  *
+ * Alter some input labels and descriptions for IEF for block_content.
  */
-function adminx_form_alter(&$form, FormStateInterface $form_state) {
-  $form = $form;
-  if (isset($form['header']['node_bulk_form'])) {
-    $form['header']['#attributes']['class'][] = 'view__header';
-    $form['header']['#attributes']['class'][] = 'mdl-card';
-    $form['header']['#attributes']['class'][] = 'mdl-shadow--2dp';
-    $form['header']['node_bulk_form']['#attributes']['class'][] = 'form--inline';
-    $form['header']['node_bulk_form']['#attributes']['class'][] = 'form--inline-actions';
-    $form['header']['node_bulk_form']['#attributes']['class'][] = 'mdl-card__supporting-text';
-    $form['header']['node_bulk_form']['#attributes']['class'][] = 'clearfix';
+function adminx_inline_entity_form_reference_form_alter(&$reference_form, &$form_state) {
+  if ($reference_form['#entity_type'] == 'block_content') {
+    $reference_form['#title'] = t('Add existing Box.');
+    $reference_form['entity_id']['#description'] = t('Search for existing boxes by typing their box description.');
+    $reference_form['entity_id']['#title'] = t('Box');
+    $classes = array(
+      'mdl-button',
+      'mdl-js-button',
+      'mdl-button--raised',
+      'mdl-button--colored',
+    );
+    $reference_form['actions']['ief_reference_save']['#attributes']['class'] = array_merge($reference_form['actions']['ief_reference_save']['#attributes']['class'], $classes);
+    $reference_form['actions']['ief_reference_save']['#value'] = t('Add this Box');
   }
+  $reference_form['#attached'] = array(
+    'library' => array(
+      'adminx_ui/material-design',
+    ),
+  );
+
 }
+
 /**
  * Implements hook_theme_suggestions_HOOK_alter().
  *

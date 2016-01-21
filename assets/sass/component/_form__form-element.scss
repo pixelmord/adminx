@@ -1,0 +1,36 @@
+.has-prefix {
+  padding-left: 20% !important; /* LTR */
+  [dir="rtl"] & {
+    padding-right: 20% !important;
+    padding-left: 0 !important;
+  }
+}
+.has-suffix {
+  padding-right: 20% !important; /* LTR */
+  [dir="rtl"] & {
+    padding-left: 20% !important;
+    padding-right: 0 !important;
+  }
+}
+.field__suffix,
+.field__prefix {
+  position: absolute;
+  top: 24px;
+  width: 20%;
+}
+
+.field__suffix {
+  right: 0; /* LTR */
+  [dir="rtl"] & {
+    right: auto;
+    left: 0;
+  }
+}
+.field__prefix {
+  left: 0; /* LTR */
+  [dir="rtl"] & {
+    left: auto;
+    right: 0;
+  }
+}
+

@@ -139,12 +139,51 @@
 /* GRID */
 /* DATA TABLE */
 /* TOOLTIP */
-.admin-list li a {
-  text-decoration: none;
-  background-position: 1px 17px; }
-  .admin-list li a > .label {
-    text-transform: uppercase;
-    font-weight: bold; }
-  .admin-list li a > .description {
-    font-size: 12px;
-    color: rgba(33,150,243, 0.50); }
+.admin-list {
+  margin: 0;
+  padding: 0; }
+  .admin-list li {
+    position: relative;
+    border-bottom: 1px solid #bfbfbf;
+    margin: 0;
+    list-style: none none;
+    padding: 0; }
+    .admin-list li a {
+      text-decoration: none;
+      background-position: 1px 17px;
+      display: block;
+      padding: 14px 15px 14px 25px;
+      /* LTR */
+      min-height: 0; }
+      .admin-list li a:before {
+        content: '\25B8';
+        font-weight: 900;
+        position: absolute;
+        top: 0.4em;
+        font-size: 1.3em;
+        margin-left: -0.9em;
+        /* LTR */ }
+      .admin-list li a > .label {
+        text-transform: uppercase; }
+      .admin-list li a > .description {
+        font-size: 12px;
+        color: rgba(33,150,243, 0.60); }
+      .admin-list li a:hover, .admin-list li a:focus, .admin-list li a:active {
+        text-decoration: none; }
+        .admin-list li a:hover > .label, .admin-list li a:focus > .label, .admin-list li a:active > .label {
+          text-decoration: underline; }
+  .admin-list.compact li {
+    border: none; }
+    .admin-list.compact li a {
+      background-image: none;
+      padding: 2px 0; }
+
+.admin-list--add li a:before {
+  content: '+'; }
+
+[dir="rtl"] .admin-list li a {
+  padding-right: 25px;
+  padding-left: 15px; }
+  [dir="rtl"] .admin-list li a:before {
+    margin-left: 0;
+    margin-right: -0.9em; }

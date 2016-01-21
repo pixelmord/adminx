@@ -13,6 +13,10 @@
   }
 }
 
+.view__header {
+  margin-bottom: 0;
+  z-index: 0 !important;
+}
 .view-filters {
   margin-bottom: 2em;
 }
