@@ -38,6 +38,26 @@ form {
       padding: 0 !important;
     }
   }
+  > .form-wrapper:not(.form-actions) {
+    background-color: #fcfcfa;
+    border: 1px solid $base-border-color;
+    box-shadow: $base-box-shadow;
+    padding: 18px;
+    margin-bottom: 1em;
+    &:empty {
+      box-shadow: none;
+      padding: 0;
+      border: none;
+      margin: 0;
+    }
+    fieldset:not(.fieldgroup) {
+      padding: 30px 0 0;
+
+      > legend {
+        top: 0;
+      }
+    }
+  }
 
   .layout-region-node-secondary {
     .form-wrapper {
