@@ -126,6 +126,16 @@ label {
   [class$="_label"] {
     font-size: $input-text-floating-label-fontsize !important;
   }
+  .form-required {
+    &:after {
+      content: '*';
+      display: inline-block;
+      font-size: 2em;
+      position: absolute;
+      right: .2em;
+      top: 0;
+    }
+  }
 }
 .mdl-textfield--floating-label .mdl-textfield__label {
   margin: 0;
