@@ -1,0 +1,12 @@
+@import '../config';
+
+@import "material-design-lite/src/textfield/textfield";
+
+.mdl-textfield {
+  width: auto;
+  min-width: 300px;
+}
+.mdl-textfield--floating-label + .description {
+  margin-top: -0.5em;
+  margin-bottom: 1.5em;
+}

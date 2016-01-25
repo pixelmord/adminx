@@ -26,6 +26,10 @@ libraries-override:
     css:
       component:
         assets/vendor/jquery.ui/themes/base/dialog.css: false
+  system/base:
+    css:
+      component:
+        css/components/autocomplete-loading.module.css: false
   classy/dialog:
     adminx/adminx.drupal.dialog
 
@@ -38,6 +42,7 @@ quickedit_stylesheets:
   - assets/css/components/quickedit.css
 
 stylesheets-remove:
+ - '@stable/css/system/components/autocomplete-loading-module.css'
  - '@classy/css/components/buttons.css'
  - '@classy/css/components/breadcrumb.css'
  - '@classy/css/components/content-header.css'

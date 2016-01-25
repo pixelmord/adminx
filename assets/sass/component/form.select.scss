@@ -1,27 +1,27 @@
+@import '../config';
+
 .form-disabled select.form-select {
   border-color: #d4d4d4;
   background-color: hsla(0, 0%, 0%, .08);
   box-shadow: none;
 }
 
-/**
-  * Limits extra long instances of select elements to the max width allowed
-  * to avoid breaking layouts.
- */
-select {
-  max-width: 100%;
-}
 select {
   cursor: pointer;
   -webkit-appearance: none;
   padding: 7px 1.571em 7px 0.5em; /* LTR */
   border: 1px solid $base-border-color;
   border-radius: $base-border-radius;
-  background: url(../../images/icons/333333/caret-down.svg) no-repeat 99% 63%, $button-primary-color; /* LTR */
+  background: url(../../images/icons/caret-down.svg) no-repeat 99% 63%, $button-primary-color; /* LTR */
   font-size: 0.875rem;
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
   -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  max-width: 100%;
+  &[multiple] {
+    background: $white;
+  }
 }
 [dir="rtl"] select {
   padding: 1px 0.714em 1px 1.571em;
@@ -29,7 +29,7 @@ select {
 }
 select:focus,
 select:hover {
-  background-image: url(../../images/icons/333333/caret-down.svg), $button-primary-color;
+  background-image: url(../../images/icons/caret-down.svg), $button-primary-color;
   color: #1a1a1a;
 }
 select:hover {

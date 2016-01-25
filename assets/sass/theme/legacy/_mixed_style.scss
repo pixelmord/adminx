@@ -61,7 +61,7 @@ dl {
 }
 
 dl dd, dl dl {
-  background: url("../images/small-bullet.png") no-repeat scroll 0 6px transparent;
+  background: url("../../../images/legacy/small-bullet.png") no-repeat scroll 0 6px transparent;
   color: #444444;
   margin-bottom: 10px;
   margin-left: 5px;
@@ -384,7 +384,7 @@ body.page-admin-modules .module-filter-clear {
 }
 
 .module-filter-clear a {
-  background: url(../images/x.svg) scroll no-repeat 0 0;
+  background: url(../../../images/legacy/x.svg) scroll no-repeat 0 0;
   display: block;
   font-size: 0;
   height: 29px;
@@ -393,7 +393,7 @@ body.page-admin-modules .module-filter-clear {
 }
 
 .module-filter-clear a:hover {
-  background: url(../images/x-hover.svg) scroll no-repeat 0 0;
+  background: url(../../../images/legacy/x-hover.svg) scroll no-repeat 0 0;
 }
 
 html.js .toggle-enable {
@@ -873,7 +873,7 @@ div.autocomplete-deluxe-multiple {
 }
 
 .autocomplete-deluxe-item-delete {
-  background: url("../images/ui-icons-ffffff-256x240.png") no-repeat scroll -100px -130px transparent;
+  background: url("../../../images/icons/ui-icons-ffffff-256x240.png") no-repeat scroll -100px -130px transparent;
   display: block;
   font-size: 1px;
   height: 13px;

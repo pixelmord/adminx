@@ -1,0 +1,55 @@
+@import '../config';
+
+.label,
+label {
+  display: table;
+  margin: 0 0 0.1em;
+  padding: 0;
+  font-weight: 400;
+  color: $label-color;
+  font-size: $input-text-floating-label-fontsize !important;
+
+  &.mdl-textfield__label,
+  &.mdl-checkbox,
+  &.mdl-radio {
+    color: $label-color;
+  }
+
+  &.mdl-checkbox,
+  &.mdl-radio {
+    font-weight: normal;
+  }
+  [class$="_label"] {
+    font-size: $input-text-floating-label-fontsize !important;
+  }
+  .form-required {
+    &:after {
+      content: '*';
+      display: inline-block;
+      font-size: 2em;
+      position: absolute;
+      right: .2em;
+      top: 0;
+    }
+  }
+}
+.mdl-textfield--floating-label .mdl-textfield__label {
+  margin: 0;
+  color: $label-color-muted;
+  font-size: $input-text-floating-label-fontsize !important;
+}
+label.error {
+  color: #a51b00;
+}
+label[for] {
+  cursor: pointer;
+}
+.form-item label.option {
+  text-transform: none;
+}
+.form-item label.option input {
+  vertical-align: middle;
+}
+.form-disabled label {
+  color: #737373;
+}

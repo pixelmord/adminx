@@ -1,3 +1,5 @@
+@import '../config';
+
 .has-prefix {
   padding-left: 20% !important; /* LTR */
   [dir="rtl"] & {

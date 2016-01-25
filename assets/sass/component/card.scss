@@ -1,5 +1,8 @@
 @import '../config';
 
+@import "material-design-lite/src/card/card";
+
+
 .mdl-card--colored {
-  background: $card-colored-background-color !important;
+  background: $card-colored-background-color;
 }

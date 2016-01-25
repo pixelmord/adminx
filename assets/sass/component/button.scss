@@ -1,3 +1,6 @@
+@import '../config';
+
+@import "material-design-lite/src/button/button";
 
 .mdl-button--danger.mdl-button--danger {
   color: $error-color;

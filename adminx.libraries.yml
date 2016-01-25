@@ -5,11 +5,17 @@ global-styling:
     component:
       # css-components:css #
 
+      assets/css/component/00_material-design-lite-misc.css: {}
+
       assets/css/component/action-links.css: {}
 
       assets/css/component/admin-list.css: {}
 
+      assets/css/component/autocomplete-loading.module.css: {}
+
       assets/css/component/breadcrumbs.css: {}
+
+      assets/css/component/button.css: {}
 
       assets/css/component/card.css: {}
 
@@ -27,7 +33,19 @@ global-styling:
 
       assets/css/component/field-ui.css: {}
 
+      assets/css/component/form.checkbox.css: {}
+
       assets/css/component/form.css: {}
+
+      assets/css/component/form.fieldset.css: {}
+
+      assets/css/component/form.form-element.css: {}
+
+      assets/css/component/form.radio.css: {}
+
+      assets/css/component/form.select.css: {}
+
+      assets/css/component/form.textfield.css: {}
 
       assets/css/component/help.css: {}
 
@@ -36,6 +54,8 @@ global-styling:
       assets/css/component/ief-form.css: {}
 
       assets/css/component/inline-form.css: {}
+
+      assets/css/component/label.css: {}
 
       assets/css/component/menus-and-lists.css: {}
 
@@ -80,11 +100,10 @@ global-styling:
       # endinject #
     layout:
       assets/css/layout/layout.css: {}
-    theme:
-      assets/css/theme.css: {}
+
   js:
     assets/js/material-drupal-fixes.js: {}
-    assets/js/material.js: {}
+    assets/js/material/material.min.js: {}
 
 material-design:
   js:
