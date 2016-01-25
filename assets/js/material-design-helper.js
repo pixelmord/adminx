@@ -6,7 +6,8 @@
  */
 
 
-(function ($, window, undefined) {
+(function ($, window) {
+  'use strict';
 
   /**
    * Allows submit buttons in entity forms to trigger uploads by undoing
