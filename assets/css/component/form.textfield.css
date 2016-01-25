@@ -313,69 +313,132 @@
 /* Typography */
 /* Shadows */
 /* Animations */
-.mdl-data-table {
+.mdl-textfield {
   position: relative;
-  border: 1px solid rgba(0, 0, 0, 0.12);
-  border-collapse: collapse;
+  font-size: 16px;
+  display: inline-block;
+  box-sizing: border-box;
+  width: 300px;
+  max-width: 100%;
+  margin: 0;
+  padding: 20px 0; }
+  .mdl-textfield .mdl-button {
+    position: absolute;
+    bottom: 20px; }
+
+.mdl-textfield--align-right {
+  text-align: right; }
+
+.mdl-textfield--full-width {
+  width: 100%; }
+
+.mdl-textfield--expandable {
+  min-width: 32px;
+  width: auto;
+  min-height: 32px; }
+
+.mdl-textfield__input {
+  border: none;
+  border-bottom: 1px solid rgba(0,0,0, 0.12);
+  display: block;
+  font-size: 16px;
+  margin: 0;
+  padding: 4px 0;
+  width: 100%;
+  background: none;
+  text-align: left;
+  color: inherit; }
+  .mdl-textfield.is-focused .mdl-textfield__input {
+    outline: none; }
+  .mdl-textfield.is-invalid .mdl-textfield__input {
+    border-color: rgb(222, 50, 38);
+    box-shadow: none; }
+  .mdl-textfield.is-disabled .mdl-textfield__input {
+    background-color: transparent;
+    border-bottom: 1px dotted rgba(0,0,0, 0.12);
+    color: rgba(0,0,0, 0.26); }
+
+.mdl-textfield textarea.mdl-textfield__input {
+  display: block; }
+
+.mdl-textfield__label {
+  bottom: 0;
+  color: rgba(0,0,0, 0.26);
+  font-size: 16px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+  position: absolute;
+  display: block;
+  top: 24px;
+  width: 100%;
+  overflow: hidden;
   white-space: nowrap;
-  font-size: 13px;
-  background-color: rgb(255,255,255); }
-  .mdl-data-table thead {
-    padding-bottom: 3px; }
-    .mdl-data-table thead .mdl-data-table__select {
-      margin-top: 0; }
-  .mdl-data-table tbody tr {
-    position: relative;
-    height: 48px;
-    transition-duration: 0.28s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: background-color; }
-    .mdl-data-table tbody tr.is-selected {
-      background-color: #e0e0e0; }
-    .mdl-data-table tbody tr:hover {
-      background-color: #eeeeee; }
-  .mdl-data-table td, .mdl-data-table th {
-    padding: 0 18px 0 18px;
-    text-align: right; }
-    .mdl-data-table td:first-of-type, .mdl-data-table th:first-of-type {
-      padding-left: 24px; }
-    .mdl-data-table td:last-of-type, .mdl-data-table th:last-of-type {
-      padding-right: 24px; }
-  .mdl-data-table td {
-    position: relative;
-    vertical-align: top;
-    height: 48px;
-    border-top: 1px solid rgba(0, 0, 0, 0.12);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
-    padding-top: 12px;
-    box-sizing: border-box; }
-    .mdl-data-table td .mdl-data-table__select {
-      vertical-align: top;
-      position: absolute;
-      left: 24px; }
-  .mdl-data-table th {
-    position: relative;
-    vertical-align: bottom;
-    text-overflow: ellipsis;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 24px;
-    letter-spacing: 0;
-    height: 48px;
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.54);
-    padding-bottom: 8px;
-    box-sizing: border-box; }
-    .mdl-data-table th .mdl-data-table__select {
-      position: absolute;
-      bottom: 8px;
-      left: 24px; }
-
-.mdl-data-table__select {
-  width: 16px; }
-
-.mdl-data-table__cell--non-numeric.mdl-data-table__cell--non-numeric {
   text-align: left; }
+  .mdl-textfield.is-dirty .mdl-textfield__label {
+    visibility: hidden; }
+  .mdl-textfield--floating-label .mdl-textfield__label {
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); }
+  .mdl-textfield.is-disabled.is-disabled .mdl-textfield__label {
+    color: rgba(0,0,0, 0.26); }
+  .mdl-textfield--floating-label.is-focused .mdl-textfield__label,
+  .mdl-textfield--floating-label.is-dirty .mdl-textfield__label {
+    color: rgb(33,150,243);
+    font-size: 12px;
+    top: 4px;
+    visibility: visible; }
+  .mdl-textfield--floating-label.is-focused .mdl-textfield__expandable-holder .mdl-textfield__label,
+  .mdl-textfield--floating-label.is-dirty .mdl-textfield__expandable-holder .mdl-textfield__label {
+    top: -16px; }
+  .mdl-textfield--floating-label.is-invalid .mdl-textfield__label {
+    color: rgb(222, 50, 38);
+    font-size: 12px; }
+  .mdl-textfield__label:after {
+    background-color: rgb(33,150,243);
+    bottom: 20px;
+    content: '';
+    height: 2px;
+    left: 45%;
+    position: absolute;
+    transition-duration: 0.2s;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    visibility: hidden;
+    width: 10px; }
+  .mdl-textfield.is-focused .mdl-textfield__label:after {
+    left: 0;
+    visibility: visible;
+    width: 100%; }
+  .mdl-textfield.is-invalid .mdl-textfield__label:after {
+    background-color: rgb(222, 50, 38); }
 
-.mdl-data-table {
-  white-space: normal !important; }
+.mdl-textfield__error {
+  color: rgb(222, 50, 38);
+  position: absolute;
+  font-size: 12px;
+  margin-top: 3px;
+  visibility: hidden;
+  display: block; }
+  .mdl-textfield.is-invalid .mdl-textfield__error {
+    visibility: visible; }
+
+.mdl-textfield__expandable-holder {
+  display: inline-block;
+  position: relative;
+  margin-left: 32px;
+  transition-duration: 0.2s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  max-width: 0.1px; }
+  .mdl-textfield.is-focused .mdl-textfield__expandable-holder, .mdl-textfield.is-dirty .mdl-textfield__expandable-holder {
+    max-width: 600px; }
+  .mdl-textfield__expandable-holder .mdl-textfield__label:after {
+    bottom: 0; }
+
+.mdl-textfield {
+  width: auto;
+  min-width: 300px; }
+
+.mdl-textfield--floating-label + .description {
+  margin-top: -0.5em;
+  margin-bottom: 1.5em; }

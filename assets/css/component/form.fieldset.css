@@ -139,14 +139,34 @@
 /* GRID */
 /* DATA TABLE */
 /* TOOLTIP */
-.draggable a.tabledrag-handle {
-  height: 2em; }
+fieldset legend {
+  letter-spacing: 0.08em;
+  text-transform: uppercase; }
 
-a.tabledrag-handle .handle {
-  height: auto;
-  margin: 0.7em 0.5em 0;
-  background-position: 0 0;
-  width: 17px; }
+fieldset {
+  background-color: #fcfcfa;
+  border: none;
+  border-radius: 2px;
+  margin: 1em 0;
+  padding: 0;
+  position: relative;
+  min-width: 0; }
 
-.tabledrag-toggle-weight-wrapper .link {
-  font-size: 0.7em; }
+fieldset > legend {
+  font-weight: 400;
+  font-size: 13px !important;
+  border-bottom: 1px solid rgb(33,150,243);
+  padding-bottom: 0.2em;
+  width: 100%; }
+
+.fieldgroup {
+  min-width: 0; }
+
+@-moz-document url-prefix() {
+  .fieldgroup {
+    display: table-cell; } }
+
+form .layout-region-node-main > fieldset.form-wrapper {
+  padding-top: 50px; }
+  form .layout-region-node-main > fieldset.form-wrapper > legend {
+    top: 20px; }

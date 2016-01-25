@@ -169,6 +169,22 @@ form.block-content-form > .field-group-details,
 form .layout-region-node-main > .field-group-details {
   padding: 0 !important; }
 
+form > .form-wrapper:not(.form-actions) {
+  background-color: #fcfcfa;
+  border: 1px solid #BEBEBE;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+  padding: 18px;
+  margin-bottom: 1em; }
+  form > .form-wrapper:not(.form-actions):empty {
+    box-shadow: none;
+    padding: 0;
+    border: none;
+    margin: 0; }
+  form > .form-wrapper:not(.form-actions) fieldset:not(.fieldgroup) {
+    padding: 30px 0 0; }
+    form > .form-wrapper:not(.form-actions) fieldset:not(.fieldgroup) > legend {
+      top: 0; }
+
 form .layout-region-node-secondary .form-wrapper {
   margin-bottom: 0; }
 
@@ -200,124 +216,6 @@ form .details-description {
     line-height: .9;
     margin-right: .2em; }
 
-form .mdl-textfield--floating-label + .description {
-  margin-top: -0.5em;
-  margin-bottom: 1.5em; }
-
-fieldset legend {
-  letter-spacing: 0.08em;
-  text-transform: uppercase; }
-
-fieldset {
-  background-color: #fcfcfa;
-  border: none;
-  border-radius: 2px;
-  margin: 1em 0;
-  padding: 0;
-  position: relative;
-  min-width: 0; }
-
-fieldset > legend {
-  font-weight: 400;
-  font-size: 13px !important;
-  border-bottom: 1px solid rgb(33,150,243);
-  padding-bottom: 0.2em;
-  width: 100%; }
-
-.fieldgroup {
-  min-width: 0; }
-
-@-moz-document url-prefix() {
-  .fieldgroup {
-    display: table-cell; } }
-
-form .layout-region-node-main > fieldset.form-wrapper {
-  padding-top: 50px; }
-  form .layout-region-node-main > fieldset.form-wrapper > legend {
-    top: 20px; }
-
-.has-prefix {
-  padding-left: 20% !important;
-  /* LTR */ }
-  [dir="rtl"] .has-prefix {
-    padding-right: 20% !important;
-    padding-left: 0 !important; }
-
-.has-suffix {
-  padding-right: 20% !important;
-  /* LTR */ }
-  [dir="rtl"] .has-suffix {
-    padding-left: 20% !important;
-    padding-right: 0 !important; }
-
-.field__suffix,
-.field__prefix {
-  position: absolute;
-  top: 24px;
-  width: 20%; }
-
-.field__suffix {
-  right: 0;
-  /* LTR */ }
-  [dir="rtl"] .field__suffix {
-    right: auto;
-    left: 0; }
-
-.field__prefix {
-  left: 0;
-  /* LTR */ }
-  [dir="rtl"] .field__prefix {
-    left: auto;
-    right: 0; }
-
-.form-disabled select.form-select {
-  border-color: #d4d4d4;
-  background-color: rgba(0, 0, 0, 0.08);
-  box-shadow: none; }
-
-/**
-  * Limits extra long instances of select elements to the max width allowed
-  * to avoid breaking layouts.
- */
-select {
-  max-width: 100%; }
-
-select {
-  cursor: pointer;
-  -webkit-appearance: none;
-  padding: 7px 1.571em 7px 0.5em;
-  /* LTR */
-  border: 1px solid #BEBEBE;
-  border-radius: 2px;
-  background: url(../../images/icons/333333/caret-down.svg) no-repeat 99% 63%, rgba(158,158,158, 0.20);
-  /* LTR */
-  font-size: 0.875rem;
-  transition: all 0.1s;
-  -webkit-font-smoothing: antialiased; }
-
-[dir="rtl"] select {
-  padding: 1px 0.714em 1px 1.571em;
-  background-position: 1% 63%, 0 0; }
-
-select:focus,
-select:hover {
-  background-image: url(../../images/icons/333333/caret-down.svg), rgba(158,158,158, 0.20);
-  color: #1a1a1a; }
-
-select:hover {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.125); }
-
-/**
-  * Select elements - Webkit only
-  */
-.mdl-button--danger.mdl-button--danger {
-  color: #C70000; }
-  .mdl-button--danger.mdl-button--danger .mdl-ripple {
-    background: #FFDDDD; }
-  .mdl-button--danger.mdl-button--danger.mdl-button--raised, .mdl-button--danger.mdl-button--danger.mdl-button--fab {
-    color: #C70000;
-    background-color: #FFDDDD; }
-
 /**
  * Form elements.
  */
@@ -333,55 +231,6 @@ form {
 
 .form-type-checkbox {
   padding: 0; }
-
-.label,
-label {
-  display: table;
-  margin: 0 0 0.1em;
-  padding: 0;
-  font-weight: 400;
-  color: rgb(33,150,243);
-  font-size: 13px !important; }
-  .label.mdl-textfield__label, .label.mdl-checkbox, .label.mdl-radio,
-  label.mdl-textfield__label,
-  label.mdl-checkbox,
-  label.mdl-radio {
-    color: rgb(33,150,243); }
-  .label.mdl-checkbox, .label.mdl-radio,
-  label.mdl-checkbox,
-  label.mdl-radio {
-    font-weight: normal; }
-  .label [class$="_label"],
-  label [class$="_label"] {
-    font-size: 13px !important; }
-  .label .form-required:after,
-  label .form-required:after {
-    content: '*';
-    display: inline-block;
-    font-size: 2em;
-    position: absolute;
-    right: .2em;
-    top: 0; }
-
-.mdl-textfield--floating-label .mdl-textfield__label {
-  margin: 0;
-  color: rgba(33,150,243, 0.60);
-  font-size: 13px !important; }
-
-label.error {
-  color: #a51b00; }
-
-label[for] {
-  cursor: pointer; }
-
-.form-item label.option {
-  text-transform: none; }
-
-.form-item label.option input {
-  vertical-align: middle; }
-
-.form-disabled label {
-  color: #737373; }
 
 .form-disabled input.form-text,
 .form-disabled input.form-tel,
@@ -417,12 +266,6 @@ label[for] {
   outline: 0;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05), 0 0 8px 1px #e62600;
   background-color: #fcf4f2; }
-
-.form-required:after {
-  background-image: url(../../images/required.svg);
-  background-size: 7px 7px;
-  width: 7px;
-  height: 7px; }
 
 .form-item--error-message {
   margin-top: 0.15em;

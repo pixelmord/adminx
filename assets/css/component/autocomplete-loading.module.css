@@ -1,0 +1,31 @@
+/**
+ * @file
+ * Visual styles for animated throbber.
+ *
+ * @see autocomplete.js
+ */
+.js .form-type-entity-autocomplete input.form-autocomplete {
+  background-image: url(../../images/icons/ic_arrow_drop_down_circle_gray_18px.svg);
+  background-position: 100% center;
+  /* LTR */
+  background-repeat: no-repeat; }
+
+.js .form-type-entity-autocomplete .mdl-spinner {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  /* LTR */
+  width: 20px;
+  height: 20px;
+  margin-top: -10px; }
+
+.js[dir="rtl"] .form-type-entity-autocomplete input.form-autocomplete {
+  background-position: 0% center; }
+
+.js[dir="rtl"] .form-type-entity-autocomplete .mdl-spinner {
+  right: auto;
+  left: 0; }
+
+.js input.form-autocomplete.ui-autocomplete-loading + .mdl-spinner {
+  opacity: 1; }

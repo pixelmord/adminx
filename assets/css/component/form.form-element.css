@@ -139,14 +139,36 @@
 /* GRID */
 /* DATA TABLE */
 /* TOOLTIP */
-.draggable a.tabledrag-handle {
-  height: 2em; }
+.has-prefix {
+  padding-left: 20% !important;
+  /* LTR */ }
+  [dir="rtl"] .has-prefix {
+    padding-right: 20% !important;
+    padding-left: 0 !important; }
 
-a.tabledrag-handle .handle {
-  height: auto;
-  margin: 0.7em 0.5em 0;
-  background-position: 0 0;
-  width: 17px; }
+.has-suffix {
+  padding-right: 20% !important;
+  /* LTR */ }
+  [dir="rtl"] .has-suffix {
+    padding-left: 20% !important;
+    padding-right: 0 !important; }
 
-.tabledrag-toggle-weight-wrapper .link {
-  font-size: 0.7em; }
+.field__suffix,
+.field__prefix {
+  position: absolute;
+  top: 24px;
+  width: 20%; }
+
+.field__suffix {
+  right: 0;
+  /* LTR */ }
+  [dir="rtl"] .field__suffix {
+    right: auto;
+    left: 0; }
+
+.field__prefix {
+  left: 0;
+  /* LTR */ }
+  [dir="rtl"] .field__prefix {
+    left: auto;
+    right: 0; }

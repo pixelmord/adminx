@@ -139,28 +139,26 @@
 /* GRID */
 /* DATA TABLE */
 /* TOOLTIP */
-fieldset.ief-form {
+.ief-form {
   background: #fff;
-  padding: 0 !important;
+  padding: 1em !important;
   border-radius: 0;
-  z-index: 1; }
-  fieldset.ief-form:before {
+  z-index: 10;
+  /* keep on top of other elements on the page */
+  outline: 9999px solid rgba(243, 243, 243, 0.85);
+  position: relative; }
+  .ief-form:before {
     content: '';
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     z-index: -1;
-    background: rgba(243, 243, 243, 0.85);
-    width: 5000px;
-    height: 5000px;
-    top: 50%;
-    left: 50%;
-    margin-left: -2500px;
-    margin-top: -2500px; }
-  fieldset.ief-form > .fieldset-wrapper {
-    background: white;
-    padding: 1em;
-    border: 1px solid #efefef;
-    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.2); }
-  fieldset.ief-form fieldset {
+    background: #fff;
+    border: 1px solid #CACACA;
+    box-shadow: 5px 5px 8px black; }
+  .ief-form fieldset {
     background: transparent; }
 
 .ief-entity-table {
