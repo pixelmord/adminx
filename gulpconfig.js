@@ -3,7 +3,7 @@ var path = require('path');
 module.exports = {
   basePath: './assets',
   browserSyncOptions: {
-    proxyServer: 'avery-seed.dev'
+    proxyServer: 'myproject.dev'
   },
   lintBrowser: {
     src: '/js/*.js'
