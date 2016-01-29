@@ -4,6 +4,8 @@
   "description": "Drupal 8 admin theme.",
   "devDependencies": {
     "gulp": "^3.9.0",
+    "gulp-task-backstop-test": "github:wunderkraut/gulp-task-backstop-test",
+    "gulp-task-browsersync": "github:wunderkraut/gulp-task-browsersync",
     "gulp-task-css-inject": "github:wunderkraut/gulp-task-css-inject",
     "gulp-task-lint-browser": "github:wunderkraut/gulp-task-lint-browser",
     "gulp-task-sass": "github:wunderkraut/gulp-task-sass",

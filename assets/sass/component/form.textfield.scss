@@ -3,10 +3,43 @@
 @import "material-design-lite/src/textfield/textfield";
 
 .mdl-textfield {
-  width: auto;
-  min-width: 300px;
+  width: 500px;
+  &.has-prefix,
+  &.has-suffix {
+    display: flex;
+  }
+  table & {
+    width: auto;
+    min-width: 100px
+  }
 }
 .mdl-textfield--floating-label + .description {
   margin-top: -0.5em;
   margin-bottom: 1.5em;
+}
+.mdl-textfield--floating-label {
+  .mdl-textfield__label {
+    color: $label-color;
+  }
+
+  &.is-invalid {
+    .mdl-textfield__label {
+      color: $label-color;
+    }
+    .mdl-textfield__input {
+      border-color: $input-text-bottom-border-color;
+    }
+  }
+
+  .mdl-textfield__input.error {
+    border-color: $input-text-error-color;
+
+    & + .mdl-textfield__label {
+      color: $input-text-error-color;
+      padding-left: .5em;
+    }
+    &:focus {
+      box-shadow: none;
+    }
+  }
 }

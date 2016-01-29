@@ -1,0 +1,5 @@
+features:
+  favicon: true
+  logo: true
+  slogan: false
+show_row_weight_toggle: false

@@ -10,8 +10,7 @@
   'use strict';
 
   /**
-   * Allows submit buttons in entity forms to trigger uploads by undoing
-   * work done by Drupal.behaviors.fileButtons.
+   * Upgrade all components.
    */
   Drupal.behaviors.materialDesignHelper = {
     attach: function (context) {

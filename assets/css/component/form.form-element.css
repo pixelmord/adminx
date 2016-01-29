@@ -140,35 +140,32 @@
 /* DATA TABLE */
 /* TOOLTIP */
 .has-prefix {
-  padding-left: 20% !important;
-  /* LTR */ }
-  [dir="rtl"] .has-prefix {
-    padding-right: 20% !important;
-    padding-left: 0 !important; }
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
 .has-suffix {
-  padding-right: 20% !important;
-  /* LTR */ }
-  [dir="rtl"] .has-suffix {
-    padding-left: 20% !important;
-    padding-right: 0 !important; }
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
-.field__suffix,
-.field__prefix {
-  position: absolute;
-  top: 24px;
-  width: 20%; }
+.field__prefix,
+.field__suffix {
+  display: inline-block;
+  margin-top: 0.3em; }
 
 .field__suffix {
-  right: 0;
+  margin-left: 0.5em;
   /* LTR */ }
   [dir="rtl"] .field__suffix {
-    right: auto;
-    left: 0; }
+    margin-right: 0.5em;
+    margin-left: 0; }
 
 .field__prefix {
-  left: 0;
+  margin-right: 0.5em;
   /* LTR */ }
   [dir="rtl"] .field__prefix {
-    left: auto;
-    right: 0; }
+    margin-left: 0.5em;
+    margin-right: 0; }
+
+/*# sourceMappingURL=form.form-element.css.map */

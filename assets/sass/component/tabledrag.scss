@@ -1,17 +1,35 @@
 @import '../config';
 
-.draggable a.tabledrag-handle {
-  height: 2em;
+.draggable {
+  > td:first-child {
+    padding-left: 34px;
+    vertical-align: middle;
+  }
+  .tabledrag-changed {
+    padding-left: .5em;
+  }
+  a.tabledrag-handle {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 22px;
+  }
 }
 
 a.tabledrag-handle .handle {
   height: auto;
-  margin: 0.7em 0.5em 0;
-  background-position: 0 0;
+  margin: 0 0.5em 0 0;
+  background-position: 0 center;
   width: 17px;
 }
 .tabledrag-toggle-weight-wrapper {
+  .no-row-weight-toggle & {
+    display: none;
+  }
   .link {
     font-size: 0.7em;
   }
 }
+

@@ -1,0 +1,8 @@
+{% set classes = [
+    'mdl-button',
+    'mdl-js-button',
+    'mdl-button--raised',
+    element['#button_type'] == 'primary' ? 'mdl-button--colored',
+  ]
+%}
+<button{{ attributes.addClass(classes) }}><strong>+</strong> {{ attributes.value }}</button>{{ children }}

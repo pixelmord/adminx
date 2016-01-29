@@ -603,7 +603,7 @@ body {
   cursor: default;
   padding: 0;
   margin: 0;
-  background: #DCDCDC; }
+  background: #F0F2F7; }
 
 /*
 // Tables
@@ -622,6 +622,45 @@ table.borderless {
   border: 1px #C0C0C0 dashed; }
   .cke_editable table.borderless td {
     border: 1px #C0C0C0 dashed; }
+
+/*
+// =============================================================================
+// @file:
+// basic elements for media (e.g. img and video)
+// =============================================================================
+*/
+/* @todo: replace with mixin */
+img,
+video {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+  -ms-interpolation-mode: bicubic; }
+
+/*
+// Avoid line breaks within paragraphs
+*/
+p img,
+p video,
+h1 img,
+h1 video, h2 img,
+h2 video, h3 img,
+h3 video, h4 img,
+h4 video, h5 img,
+h5 video, h6 img,
+h6 video {
+  display: inline-block; }
+
+/*
+// Figure image
+//
+// Markup:
+// <figure><img src="http://placehold.it/250x250" /></figure>
+//
+// Styleguide 3.1.2
+*/
+figure > img {
+  display: block; }
 
 /*
 //
@@ -713,8 +752,7 @@ h6 a,
 // =============================================================================
 */
 html, body {
-  font-family: 'Roboto','Helvetica','Arial',sans-serif !important;
-  background-color: #FAFAFA; }
+  font-family: 'Roboto','Helvetica','Arial',sans-serif !important; }
 
 h4.label {
   font-size: 16px;
@@ -911,3 +949,5 @@ blockquote {
 }
 *!/
 */
+
+/*# sourceMappingURL=elements.css.map */

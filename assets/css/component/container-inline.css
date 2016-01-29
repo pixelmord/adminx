@@ -148,4 +148,7 @@
   display: -ms-flexbox;
   display: flex; }
   .container-inline .form-item {
-    margin: 0; }
+    margin: 0;
+    width: auto; }
+
+/*# sourceMappingURL=container-inline.css.map */

@@ -134,7 +134,7 @@ $label-color: unquote("rgb(#{$color-primary})");
 $label-color-muted: unquote("rgba(#{$color-primary}, 0.60)");
 
 /* ==========  Components  ========== */
-$form-description-color: $label-color-muted;
+$form-description-color: unquote("rgba(#{$palette-grey-700}, 0.90)");
 $fieldset-ief-form-bg: unquote("rgba(#{$color-primary}, 0.02)") !default;
 $fieldset-ief-form-border-color: unquote("rgba(#{$color-primary}, 0.7)") !default;
 

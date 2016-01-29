@@ -1,0 +1,1 @@
+{"version":3,"sources":["editor.css"],"names":[],"mappings":"AAAA;EACE,6BAA6B;EAC7B,8BAA8B,EAAE","file":"component/editor.css","sourcesContent":[".cke-chrome {\n  border-bottom-left-radius: 0;\n  border-bottom-right-radius: 0; }\n"],"sourceRoot":"/source/"}

@@ -160,6 +160,9 @@ select {
   max-width: 100%; }
   select[multiple] {
     background: #fff; }
+  table select {
+    width: auto;
+    min-width: 100px; }
 
 [dir="rtl"] select {
   padding: 1px 0.714em 1px 1.571em;
@@ -176,3 +179,5 @@ select:hover {
 /**
   * Select elements - Webkit only
   */
+
+/*# sourceMappingURL=form.select.css.map */

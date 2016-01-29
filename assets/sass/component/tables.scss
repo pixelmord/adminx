@@ -4,4 +4,11 @@
 
 .mdl-data-table {
   white-space: normal !important;
+  td,
+  th {
+    padding-bottom: 12px;
+  }
+}
+.field-multiple-table {
+  margin-bottom: 1em;
 }

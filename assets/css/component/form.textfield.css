@@ -436,9 +436,34 @@
     bottom: 0; }
 
 .mdl-textfield {
-  width: auto;
-  min-width: 300px; }
+  width: 500px; }
+  .mdl-textfield.has-prefix, .mdl-textfield.has-suffix {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex; }
+  table .mdl-textfield {
+    width: auto;
+    min-width: 100px; }
 
 .mdl-textfield--floating-label + .description {
   margin-top: -0.5em;
   margin-bottom: 1.5em; }
+
+.mdl-textfield--floating-label .mdl-textfield__label {
+  color: rgb(33,150,243); }
+
+.mdl-textfield--floating-label.is-invalid .mdl-textfield__label {
+  color: rgb(33,150,243); }
+
+.mdl-textfield--floating-label.is-invalid .mdl-textfield__input {
+  border-color: rgba(0,0,0, 0.12); }
+
+.mdl-textfield--floating-label .mdl-textfield__input.error {
+  border-color: rgb(222, 50, 38); }
+  .mdl-textfield--floating-label .mdl-textfield__input.error + .mdl-textfield__label {
+    color: rgb(222, 50, 38);
+    padding-left: .5em; }
+  .mdl-textfield--floating-label .mdl-textfield__input.error:focus {
+    box-shadow: none; }
+
+/*# sourceMappingURL=form.textfield.css.map */

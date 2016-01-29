@@ -1,0 +1,31 @@
+@import '../config';
+@import "material-design-lite/src/mixins";
+
+textarea {
+  &:focus {
+    outline: none;
+  }
+}
+
+.form-textarea-wrapper {
+  position: relative;
+  padding-bottom: 1em;
+
+  textarea {
+    display: block;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-color: $input-text-bottom-border-color;
+    @include material-animation-default();
+    padding: 0.5em;
+    &:focus {
+      border-bottom: 2px solid $input-text-highlight-color;
+    }
+  }
+}
+.text-format-wrapper {
+  .filter-wrapper {
+    margin-top: -1em;
+  }
+}

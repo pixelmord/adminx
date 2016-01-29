@@ -1,28 +1,26 @@
 @import '../config';
 
+fieldset.form-item,
 fieldset {
-  legend {
+  border: none;
+  border-radius: 2px;
+  margin: 2em 0 0;
+  padding: 0;
+  position: relative;
+  min-width: 0;
+  > legend {
+    font-weight: 400;
+    font-size: $input-text-floating-label-fontsize !important;
+    border-bottom: 1px solid $label-color;
+    padding-bottom: 0.2em;
+    width: 100%;
+    margin-bottom: 1em;
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
 }
-fieldset {
-  background-color: #fcfcfa;
-  border: none;
-  border-radius: 2px;
-  margin: 1em 0;
-  padding: 0;
-  position: relative;
-  min-width: 0;
-}
-fieldset > legend {
-  font-weight: 400;
-  font-size: $input-text-floating-label-fontsize !important;
-  border-bottom: 1px solid $label-color;
-  padding-bottom: 0.2em;
-  width: 100%;
-}
+
 .fieldgroup {
   min-width: 0;
 }

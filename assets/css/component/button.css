@@ -313,7 +313,7 @@
 /* Typography */
 /* Shadows */
 /* Animations */
-.mdl-button {
+.mdl-button, .button {
   background: transparent;
   border: none;
   border-radius: 2px;
@@ -338,41 +338,41 @@
   text-align: center;
   line-height: 36px;
   vertical-align: middle; }
-  .mdl-button::-moz-focus-inner {
+  .mdl-button::-moz-focus-inner, .button::-moz-focus-inner {
     border: 0; }
-  .mdl-button:hover {
+  .mdl-button:hover, .button:hover {
     background-color: rgba(158,158,158, 0.20); }
-  .mdl-button:focus:not(:active) {
+  .mdl-button:focus:not(:active), .button:focus:not(:active) {
     background-color: rgba(0,0,0, 0.12); }
-  .mdl-button:active {
+  .mdl-button:active, .button:active {
     background-color: rgba(158,158,158, 0.40); }
-  .mdl-button.mdl-button--colored {
+  .mdl-button.mdl-button--colored, .mdl-button--colored.button {
     color: rgb(33,150,243); }
-    .mdl-button.mdl-button--colored:focus:not(:active) {
+    .mdl-button.mdl-button--colored:focus:not(:active), .mdl-button--colored.button:focus:not(:active) {
       background-color: rgba(0,0,0, 0.12); }
 
-input.mdl-button[type="submit"] {
+input.mdl-button[type="submit"], input[type="submit"].button {
   -webkit-appearance: none; }
 
-.mdl-button--raised {
+.mdl-button--raised, .button {
   background: rgba(158,158,158, 0.20);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
-  .mdl-button--raised:active {
+  .mdl-button--raised:active, .button:active {
     box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12), 0 2px 4px -1px rgba(0, 0, 0, 0.2);
     background-color: rgba(158,158,158, 0.40); }
-  .mdl-button--raised:focus:not(:active) {
+  .mdl-button--raised:focus:not(:active), .button:focus:not(:active) {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
     background-color: rgba(158,158,158, 0.40); }
-  .mdl-button--raised.mdl-button--colored {
+  .mdl-button--raised.mdl-button--colored, .mdl-button--colored.button {
     background: rgb(33,150,243);
     color: rgb(255,255,255); }
-    .mdl-button--raised.mdl-button--colored:hover {
+    .mdl-button--raised.mdl-button--colored:hover, .mdl-button--colored.button:hover {
       background-color: rgb(33,150,243); }
-    .mdl-button--raised.mdl-button--colored:active {
+    .mdl-button--raised.mdl-button--colored:active, .mdl-button--colored.button:active {
       background-color: rgb(33,150,243); }
-    .mdl-button--raised.mdl-button--colored:focus:not(:active) {
+    .mdl-button--raised.mdl-button--colored:focus:not(:active), .mdl-button--colored.button:focus:not(:active) {
       background-color: rgb(33,150,243); }
-    .mdl-button--raised.mdl-button--colored .mdl-ripple {
+    .mdl-button--raised.mdl-button--colored .mdl-ripple, .mdl-button--colored.button .mdl-ripple {
       background: rgb(255,255,255); }
 
 .mdl-button--fab {
@@ -461,15 +461,15 @@ input.mdl-button[type="submit"] {
   width: 100%;
   z-index: 0;
   overflow: hidden; }
-  .mdl-button[disabled] .mdl-button__ripple-container .mdl-ripple,
-  .mdl-button.mdl-button--disabled .mdl-button__ripple-container .mdl-ripple {
+  .mdl-button[disabled] .mdl-button__ripple-container .mdl-ripple, [disabled].button .mdl-button__ripple-container .mdl-ripple,
+  .mdl-button.mdl-button--disabled .mdl-button__ripple-container .mdl-ripple, .mdl-button--disabled.button .mdl-button__ripple-container .mdl-ripple {
     background-color: transparent; }
 
 .mdl-button--primary.mdl-button--primary {
   color: rgb(33,150,243); }
   .mdl-button--primary.mdl-button--primary .mdl-ripple {
     background: rgb(255,255,255); }
-  .mdl-button--primary.mdl-button--primary.mdl-button--raised, .mdl-button--primary.mdl-button--primary.mdl-button--fab {
+  .mdl-button--primary.mdl-button--primary.mdl-button--raised, .mdl-button--primary.mdl-button--primary.button, .mdl-button--primary.mdl-button--primary.mdl-button--fab {
     color: rgb(255,255,255);
     background-color: rgb(33,150,243); }
 
@@ -477,11 +477,11 @@ input.mdl-button[type="submit"] {
   color: rgb(139,195,74); }
   .mdl-button--accent.mdl-button--accent .mdl-ripple {
     background: rgb(255,255,255); }
-  .mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.mdl-button--fab {
+  .mdl-button--accent.mdl-button--accent.mdl-button--raised, .mdl-button--accent.mdl-button--accent.button, .mdl-button--accent.mdl-button--accent.mdl-button--fab {
     color: rgb(255,255,255);
     background-color: rgb(139,195,74); }
 
-.mdl-button[disabled][disabled], .mdl-button.mdl-button--disabled.mdl-button--disabled {
+.mdl-button[disabled][disabled], [disabled][disabled].button, .mdl-button.mdl-button--disabled.mdl-button--disabled, .mdl-button--disabled.mdl-button--disabled.button {
   color: rgba(0,0,0, 0.26);
   cursor: default;
   background-color: transparent; }
@@ -491,7 +491,7 @@ input.mdl-button[type="submit"] {
   color: rgba(0,0,0, 0.26);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
 
-.mdl-button--raised[disabled][disabled], .mdl-button--raised.mdl-button--disabled.mdl-button--disabled {
+.mdl-button--raised[disabled][disabled], [disabled][disabled].button, .mdl-button--raised.mdl-button--disabled.mdl-button--disabled, .mdl-button--disabled.mdl-button--disabled.button {
   background-color: rgba(0,0,0, 0.12);
   color: rgba(0,0,0, 0.26);
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12); }
@@ -499,13 +499,47 @@ input.mdl-button[type="submit"] {
 .mdl-button--colored[disabled][disabled], .mdl-button--colored.mdl-button--disabled.mdl-button--disabled {
   color: rgba(0,0,0, 0.26); }
 
-.mdl-button .material-icons {
+.mdl-button .material-icons, .button .material-icons {
   vertical-align: middle; }
 
-.mdl-button--danger.mdl-button--danger {
+.mdl-button--icon {
+  border-radius: 2px; }
+  .mdl-button--icon > svg {
+    margin: 0;
+    top: 0.2em; }
+
+.mdl-button--danger, .button--danger {
   color: #C70000; }
-  .mdl-button--danger.mdl-button--danger .mdl-ripple {
+  .mdl-button--danger .mdl-ripple, .button--danger .mdl-ripple {
     background: #FFDDDD; }
-  .mdl-button--danger.mdl-button--danger.mdl-button--raised, .mdl-button--danger.mdl-button--danger.mdl-button--fab {
+  .mdl-button--danger.mdl-button--raised, .mdl-button--danger.button, .button.button--danger, .mdl-button--raised.button--danger, .mdl-button--danger.mdl-button--fab, .mdl-button--fab.button--danger {
     color: #C70000;
     background-color: #FFDDDD; }
+  .mdl-button--danger.mdl-button--icon svg, .mdl-button--icon.button--danger svg {
+    fill: #C70000; }
+
+.mdl-button--colored > svg {
+  fill: #fff; }
+
+.mdl-button--colored.button--primary {
+  background: #0074BD; }
+
+.mdl-button + .mdl-button, .button + .mdl-button, .mdl-button + .button, .button + .button {
+  margin-left: 0.7em; }
+
+.mdl-button--icon + .mdl-button--icon {
+  margin-left: 0.4em; }
+
+.button {
+  text-decoration: none; }
+  .button:hover {
+    text-decoration: none; }
+  .dropbutton-wrapper + .button {
+    margin-left: 1em; }
+
+button > svg {
+  top: .4em;
+  position: relative;
+  margin-right: .3em; }
+
+/*# sourceMappingURL=button.css.map */

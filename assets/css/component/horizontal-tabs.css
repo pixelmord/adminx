@@ -139,5 +139,12 @@
 /* GRID */
 /* DATA TABLE */
 /* TOOLTIP */
+.vertical-tabs__pane .horizontal-tabs {
+  margin-bottom: 0; }
+
 .horizontal-tabs-pane {
-  box-shadow: none; }
+  box-shadow: none;
+  margin-bottom: 0;
+  padding: 0; }
+
+/*# sourceMappingURL=horizontal-tabs.css.map */

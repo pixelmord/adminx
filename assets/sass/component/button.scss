@@ -2,7 +2,15 @@
 
 @import "material-design-lite/src/button/button";
 
-.mdl-button--danger.mdl-button--danger {
+.mdl-button--icon {
+  border-radius: $button-border-radius;
+  > svg {
+    margin: 0;
+    top: 0.2em;
+  }
+}
+
+.mdl-button--danger {
   color: $error-color;
   & .mdl-ripple {
     background: $error-color-inverted;
@@ -10,5 +18,55 @@
   &.mdl-button--raised, &.mdl-button--fab {
     color: $error-color;
     background-color: $error-color-inverted;
+  }
+  &.mdl-button--icon {
+    svg {
+      fill: $error-color;
+    }
+  }
+}
+
+.mdl-button--colored {
+  > svg {
+    fill: $white;
+  }
+  &.button--primary {
+    background: $drupal-blue;
+  }
+}
+
+.mdl-button {
+  & + .mdl-button {
+    margin-left: 0.7em;
+  }
+}
+.mdl-button--icon {
+  & + .mdl-button--icon {
+    margin-left: 0.4em;
+  }
+}
+
+
+.button {
+  @extend .mdl-button;
+  @extend .mdl-button--raised;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+  .dropbutton-wrapper + & {
+    margin-left: 1em;
+  }
+}
+.button--danger {
+  @extend .mdl-button--danger;
+}
+
+button {
+  > svg {
+    top: .4em;
+    position: relative;
+    margin-right: .3em;
   }
 }

@@ -25,9 +25,9 @@ global-styling:
 
       assets/css/component/details.css: {}
 
-      assets/css/component/dialog.css: {}
-
       assets/css/component/dropbutton.css: {}
+
+      assets/css/component/editor.css: {}
 
       assets/css/component/entity-meta.css: {}
 
@@ -45,9 +45,13 @@ global-styling:
 
       assets/css/component/form.select.css: {}
 
+      assets/css/component/form.textarea.css: {}
+
       assets/css/component/form.textfield.css: {}
 
       assets/css/component/help.css: {}
+
+      assets/css/component/hidden.module.css: {}
 
       assets/css/component/horizontal-tabs.css: {}
 
@@ -89,25 +93,32 @@ global-styling:
 
       assets/css/component/tour.theme.css: {}
 
-      assets/css/component/vertical-tabs.css: {}
-
       assets/css/component/views-ui.css: {}
-
-      assets/css/component/views_ui.admin.theme.css: {}
-
-      assets/css/component/jquery.ui/theme.css: {}
 
       # endinject #
     layout:
       assets/css/layout/layout.css: {}
 
   js:
-    assets/js/material-drupal-fixes.js: {}
+    assets/js/drupal-fixes.js: {}
     assets/js/material/material.min.js: {}
 
 material-design:
   js:
     assets/js/material-design-helper.js: {}
+
+material-design.table-header:
+  js:
+    assets/js/material-tableheader.js: {}
+  dependencies:
+    - core/jquery
+
+material-design.table-select:
+  js:
+    assets/js/material-tableselect.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
 
 node-form:
   css:
@@ -115,6 +126,19 @@ node-form:
       assets/css/layout/node-add.css: {}
   dependencies:
     - node/form
+
+drupal.node:
+  css:
+    layout:
+      assets/css/component-overrides/node.module.css: {}
+node.form:
+  css:
+    layout:
+      assets/css/component-overrides/node.module.css: {}
+drupal.node.admin:
+  css:
+    theme:
+      assets/css/component-overrides/node.admin.css: {}
 
 maintenance-page:
   js:
@@ -148,14 +172,20 @@ drupal.nav-tabs:
 vertical-tabs:
   css:
     component:
-      assets/css/component/vertical-tabs.css: {}
+      assets/css/component-overrides/vertical-tabs.css: {}
 
 adminx.jquery.ui:
   css:
     component:
-      assets/css/component/jquery.ui/theme.css: { weight: -1 }
+      assets/css/component-overrides/jquery.ui/theme.css: { weight: -1 }
 
 adminx.drupal.dialog:
   css:
     theme:
-      assets/css/component/dialog.css: {}
+      assets/css/component-overrides/dialog.css: {}
+views_ui.admin.styling:
+  css:
+    component:
+      assets/css/component-overrides/views_ui.admin.css: {}
+    theme:
+      assets/css/component-overrides/views_ui.admin.theme.css: {}

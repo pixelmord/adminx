@@ -158,8 +158,14 @@
     background: #fff;
     border: 1px solid #CACACA;
     box-shadow: 5px 5px 8px black; }
+  .ief-form > legend {
+    padding-top: 1.5em; }
   .ief-form fieldset {
     background: transparent; }
 
 .ief-entity-table {
   margin-bottom: 1em; }
+  .ief-entity-table .ief-entity-operations .button {
+    margin-bottom: 0.5em; }
+
+/*# sourceMappingURL=ief-form.css.map */

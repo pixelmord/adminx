@@ -11,9 +11,7 @@ libraries:
 
 libraries-override:
   views_ui/admin.styling:
-    css:
-      theme:
-        css/views_ui.admin.theme.css: false
+    adminx/views_ui.admin.styling
   core/drupal.vertical-tabs:
     css:
       component:
@@ -29,25 +27,35 @@ libraries-override:
   system/base:
     css:
       component:
-        css/components/autocomplete-loading.module.css: false
+        css/components/autocomplete-loading.module.css: assets/css/component-overrides/autocomplete-loading.module.css
   classy/dialog:
     adminx/adminx.drupal.dialog
+  node/drupal.node:
+    adminx/drupal.node
+  node/form:
+    adminx/node.form
+  node/drupal.node.admin:
+    adminx/drupal.node.admin
 
 libraries-extend:
   core/drupal.vertical-tabs:
     - adminx/vertical-tabs
   core/jquery.ui:
     - adminx/adminx.jquery.ui
-quickedit_stylesheets:
-  - assets/css/components/quickedit.css
+  core/drupal.tableheader:
+    - adminx/material-design.table-header
+  core/drupal.tableselect:
+    - adminx/material-design.table-select
 
 stylesheets-remove:
- - '@stable/css/system/components/autocomplete-loading-module.css'
- - '@classy/css/components/buttons.css'
+ - '@classy/css/components/button.css'
  - '@classy/css/components/breadcrumb.css'
  - '@classy/css/components/content-header.css'
  - '@classy/css/components/form.css'
  - '@classy/css/components/tabs.css'
+
+quickedit_stylesheets:
+  - assets/css/components/quickedit.css
 
 #---------------- R E G I O N S -------------------
 
@@ -63,9 +71,3 @@ regions:
   sidebar_first: 'First sidebar'
 regions_hidden:
   - sidebar_first
-
-settings:
-  features:
-      favicon: true
-      logo: true
-      slogan: false

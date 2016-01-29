@@ -19,12 +19,20 @@
     border: 1px solid #CACACA;
     box-shadow: 5px 5px 8px rgba(0, 0, 0, 1);
   }
-
+  > legend {
+    padding-top: 1.5em;
+  }
   fieldset {
     background: transparent;
+
   }
 }
 
 .ief-entity-table {
   margin-bottom: 1em;
+  .ief-entity-operations {
+    .button {
+      margin-bottom: 0.5em;
+    }
+  }
 }

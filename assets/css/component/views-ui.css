@@ -149,9 +149,16 @@
   width: 100%;
   min-height: 0; }
 
-.view__header {
+form > .form-wrapper.view__header {
   margin-bottom: 0;
-  z-index: 0 !important; }
+  z-index: 0;
+  border-radius: 2px 2px 0 0; }
 
 .view-filters {
   margin-bottom: 2em; }
+  .view-filters .mdl-textfield {
+    width: auto; }
+  .view-filters select {
+    min-width: 0; }
+
+/*# sourceMappingURL=views-ui.css.map */

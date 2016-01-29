@@ -7,14 +7,14 @@
 .vertical-tabs {
   position: relative;
   overflow: hidden;
-  margin: 10px 0;
+  margin: 10px 0 2em;
   border: 1px solid #bdbdbd;
   background-color: #ececec;
   box-shadow: $base-box-shadow;
 }
 .vertical-tabs__menu {
   float: left; /* LTR */
-  width: 240px;
+  width: 200px;
   margin: 0 -100% -1px 0; /* LTR */
   padding: 0;
   border-bottom: 1px solid #ccc;
@@ -70,6 +70,9 @@
   background: #fcfcfa;
   text-shadow: none;
   text-decoration: none;
+  .vertical-tabs__menu-item-title {
+    text-decoration: none;
+  }
 }
 .vertical-tabs__menu-item.is-selected a {
   color: #004f80;
@@ -97,12 +100,12 @@
   background-color: #fcfcfa;
 }
 .vertical-tabs__panes {
-  margin: 0 0 0 240px; /* LTR */
+  margin: 0 0 0 200px; /* LTR */
   padding: 10px 15px 10px 15px;
   border-left: 1px solid #a6a5a1; /* LTR */
 }
 [dir="rtl"] .vertical-tabs__panes {
-  margin: 0 240px 0 0;
+  margin: 0 200px 0 0;
   border-left: none;
   border-right: 1px solid #a6a5a1;
 }
@@ -117,6 +120,9 @@
   border: 0;
   color: #595959;
   box-shadow: none;
+  > .details-wrapper {
+    padding: 0;
+  }
 }
 .vertical-tabs__menu-item-summary {
   display: block;

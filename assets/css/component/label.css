@@ -142,7 +142,8 @@
 .label,
 label {
   display: table;
-  margin: 0 0 0.1em;
+  position: relative;
+  margin: 0 0 0.5em;
   padding: 0;
   font-weight: 400;
   color: rgb(33,150,243);
@@ -159,18 +160,29 @@ label {
   .label [class$="_label"],
   label [class$="_label"] {
     font-size: 13px !important; }
-  .label .form-required:after,
-  label .form-required:after {
-    content: '*';
-    display: inline-block;
-    font-size: 2em;
-    position: absolute;
-    right: .2em;
-    top: 0; }
+  .label .form-required,
+  label .form-required {
+    padding-right: 2em; }
+    .label .form-required:after,
+    label .form-required:after {
+      content: '*';
+      color: rgb(222, 50, 38);
+      display: inline-block;
+      font-size: 2em;
+      position: absolute;
+      right: 0.15em;
+      top: 0;
+      margin-top: -0.2em; }
+    .form-type-entity-autocomplete .label .form-required:after, .form-type-entity-autocomplete
+    label .form-required:after {
+      margin-top: -0.05em; }
+  th > .label, th >
+  label {
+    margin: 0; }
 
 .mdl-textfield--floating-label .mdl-textfield__label {
   margin: 0;
-  color: rgba(33,150,243, 0.60);
+  color: rgb(33,150,243);
   font-size: 13px !important; }
 
 label.error {
@@ -187,3 +199,5 @@ label[for] {
 
 .form-disabled label {
   color: #737373; }
+
+/*# sourceMappingURL=label.css.map */

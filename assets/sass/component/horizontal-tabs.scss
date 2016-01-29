@@ -1,5 +1,12 @@
 @import '../config';
 
+.horizontal-tabs {
+  .vertical-tabs__pane & {
+    margin-bottom: 0;
+  }
+}
 .horizontal-tabs-pane {
   box-shadow: none;
+  margin-bottom: 0;
+  padding: 0;
 }

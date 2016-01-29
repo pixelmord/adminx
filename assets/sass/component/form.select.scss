@@ -19,8 +19,13 @@ select {
   -webkit-font-smoothing: antialiased;
   min-width: 300px;
   max-width: 100%;
+
   &[multiple] {
     background: $white;
+  }
+  table & {
+    width: auto;
+    min-width: 100px;
   }
 }
 [dir="rtl"] select {

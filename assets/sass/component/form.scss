@@ -1,48 +1,32 @@
 @import '../config';
 
-.form-wrapper {
-  margin-bottom: 1.5em;
 
-}
 
 .fieldgroup {
   padding-top: 30px;
 }
 
 form {
-  &.block-content-form,
-  .layout-region-node-main {
-    > .form-wrapper {
-      background-color: #fcfcfa;
+  &:not(.node-form) {
+    .form__main-wrapper {
       border: 1px solid $base-border-color;
-      box-shadow: $base-box-shadow;
-      padding: 18px;
-      margin-bottom: 1em;
-      &:empty {
-        box-shadow: none;
-        padding: 0;
-        border: none;
-        margin: 0;
-      }
-      fieldset:not(.fieldgroup) {
-        padding: 30px 0 0;
-
-        > legend {
-          top: 0;
-        }
-      }
+      padding: 2em;
+      background: #FBFBFB;
     }
+  }
+
+  .layout-region-node-main {
+    border: 1px solid $base-border-color;
+    padding: 2em;
+    background: #FBFBFB;
 
     > .field-group-details {
       padding: 0 !important;
     }
   }
   > .form-wrapper:not(.form-actions) {
-    background-color: #fcfcfa;
-    border: 1px solid $base-border-color;
-    box-shadow: $base-box-shadow;
-    padding: 18px;
-    margin-bottom: 1em;
+    padding: 0;
+    margin-bottom: 0.5em;
     &:empty {
       box-shadow: none;
       padding: 0;
@@ -56,6 +40,9 @@ form {
         top: 0;
       }
     }
+    & + .field-group-tabs-wrapper {
+      margin: 1.5em 0;
+    }
   }
 
   .layout-region-node-secondary {
@@ -67,29 +54,38 @@ form {
       padding: 0 !important;
     }
   }
+  .ief-cardinality-count,
   ul.tips,
   .description,
   .details-description {
     margin-top: 1em;
-    margin-bottom: 1em;
+    margin-bottom: 1.5em;
     color: $form-description-color;
-    font-size: $base-font-size * 0.85;
     font-weight: 300;
     line-height: 1.4;
     letter-spacing: 0.05em;
-    text-transform: uppercase;
+  }
+  ul.tips,
+  .description {
+    font-size: $base-font-size * 0.85;
+
     &:before {
       content: '\2139';
-      font-size: 1.3em;
+      font-size: 1em;
       font-weight: bold;
-      color: $input-text-highlight-color;
       display: inline-block;
       border: 1px solid $form-description-color;
       border-radius: 1em;
       padding: 0 .15em .15em;
-      line-height: .9;
-      margin-right: .2em;
+      line-height: 0.9;
+      margin-right: 0.2em;
+      margin-top: -0.2em;
     }
+  }
+  .ief-cardinality-count,
+  .details-description {
+    margin-top: 0;
+    margin-bottom: 1.5em;
   }
 
 }
@@ -104,8 +100,16 @@ form {
 
 .form-item {
   margin: 0.75em 0;
+  table & {
+    margin: 0;
+  }
 }
-
+.form-submit {
+  margin-bottom: 1.5em;
+  & + .button {
+    margin-bottom: 1.5em;
+  }
+}
 .form-actions {
   margin-top: 1em;
 }

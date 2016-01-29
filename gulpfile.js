@@ -5,14 +5,17 @@ var gulpConfig = require('./gulpconfig');
 var path = require('path');
 
 // Gulp tasks
+require('gulp-task-browsersync')(gulp, gulpConfig);
 require('gulp-task-lint-browser')(gulp, gulpConfig);
 require('gulp-task-css-inject')(gulp, gulpConfig);
 require('gulp-task-sass')(gulp, gulpConfig);
 require('gulp-task-svg-stack')(gulp, gulpConfig);
+require('gulp-task-backstop-test')(gulp, gulpConfig);
 
 gulp.task('default', [
   'build',
-  'watch'
+  'watch',
+  'serve'
 ]);
 
 gulp.task('build', [

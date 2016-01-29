@@ -3,6 +3,28 @@
 use Drupal\Core\Form\FormStateInterface;
 
 /**
+ * Theme settings.
+ *
+ * -----------------------------------------------------------------------------
+ */
+function adminx_form_system_theme_settings_alter(&$form, &$form_state) {
+  $form['custom_settings'] = array(
+    '#type' => 'details',
+    '#title' => t('Custom settings'),
+  );
+  // Add a checkbox to toggle visibility of the row weight toggle.
+  $form['custom_settings']['show_row_weight_toggle'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show the row weight toggle button.'),
+    '#default_value' => theme_get_setting('show_row_weight_toggle'),
+  );
+}
+/**
+ * Preprocessing.
+ *
+ * -----------------------------------------------------------------------------
+ */
+/**
  * Implements hook_preprocess_HOOK() for HTML document templates.
  */
 function adminx_preprocess_html(&$variables) {
@@ -14,6 +36,9 @@ function adminx_preprocess_html(&$variables) {
         $variables['attributes']['class'][] = 'node-form-layout';
       }
     }
+  }
+  if (!theme_get_setting('show_row_weight_toggle')) {
+    $variables['attributes']['class'][] = 'no-row-weight-toggle';
   }
 }
 
@@ -141,6 +166,87 @@ function adminx_preprocess_admin_block_content(&$variables) {
     }
   }
 }
+/**
+ * Implements hook_preprocess_install_page().
+ */
+function adminx_preprocess_install_page(&$variables) {
+  // Adminx has custom styling for the install page.
+  $variables['#attached']['library'][] = 'adminx/install-page';
+}
+
+/**
+ * Implements hook_preprocess_maintenance_page().
+ */
+function adminx_preprocess_maintenance_page(&$variables) {
+  // Adminx has custom styling for the maintenance page.
+  $variables['#attached']['library'][] = 'adminx/maintenance-page';
+}
+
+/**
+ * Implements theme_preprocess_HOOK().
+ *
+ * @param array $variables
+ *   Array of template variables.
+ */
+function adminx_preprocess_input__submit__add(&$variables) {
+  if (isset($variables['element']['#ief_form']) && $variables['element']['#ief_form'] == 'add') {
+    $variables['element']['#button_type'] = 'primary';
+  }
+  if (
+    isset($variables['element']['#parents']) &&
+    (
+      in_array('ief_add_save', $variables['element']['#parents'], TRUE) ||
+      in_array('ief_edit_save', $variables['element']['#parents'], TRUE) ||
+      in_array('ief_reference_save', $variables['element']['#parents'], TRUE)
+    )
+  ) {
+    $variables['element']['#button_type'] = 'primary';
+  }
+}
+
+/**
+ * Implements theme_preprocess_HOOK().
+ *
+ * @param array $variables
+ *   Array of template variables.
+ */
+function adminx_preprocess_input__submit__save(&$variables) {
+  if (isset($variables['element']['#ief_form']) && $variables['element']['#ief_form'] == 'add') {
+    $variables['element']['#button_type'] = 'primary';
+  }
+  if (
+    isset($variables['element']['#parents']) &&
+    (
+      in_array('ief_add_save', $variables['element']['#parents'], TRUE) ||
+      in_array('ief_edit_save', $variables['element']['#parents'], TRUE) ||
+      in_array('ief_reference_save', $variables['element']['#parents'], TRUE)
+    )
+  ) {
+    $variables['element']['#button_type'] = 'primary';
+  }
+}
+
+/**
+ * Implements theme_preprocess_HOOK().
+ *
+ * @param array $variables
+ *   Array of template variables.
+ */
+function adminx_preprocess_input__submit(&$variables) {
+  if (isset($variables['element']['#ief_form']) && $variables['element']['#ief_form'] == 'add') {
+    $variables['element']['#button_type'] = 'primary';
+  }
+  if (
+    isset($variables['element']['#parents']) &&
+    (
+      in_array('ief_add_save', $variables['element']['#parents'], TRUE) ||
+      in_array('ief_edit_save', $variables['element']['#parents'], TRUE) ||
+      in_array('ief_reference_save', $variables['element']['#parents'], TRUE)
+    )
+  ) {
+    $variables['element']['#button_type'] = 'primary';
+  }
+}
 
 /**
  * Implements hook_element_info_alter().
@@ -150,23 +256,6 @@ function adminx_element_info_alter(&$type) {
   if (isset($type['button'])) {
     $type['button']['#attached']['library'][] = 'core/modernizr';
   }
-}
-
-
-/**
- * Implements hook_preprocess_install_page().
- */
-function adminx_preprocess_install_page(&$variables) {
-  // adminx has custom styling for the install page.
-  $variables['#attached']['library'][] = 'adminx/install-page';
-}
-
-/**
- * Implements hook_preprocess_maintenance_page().
- */
-function adminx_preprocess_maintenance_page(&$variables) {
-  // adminx has custom styling for the maintenance page.
-  $variables['#attached']['library'][] = 'adminx/maintenance-page';
 }
 
 /**
@@ -256,6 +345,46 @@ function adminx_inline_entity_form_reference_form_alter(&$reference_form, &$form
       'adminx_ui/material-design',
     ),
   );
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * @param array $variables
+ */
+function adminx_theme_suggestions_form_alter(&$suggestions, $variables) {
+  if (isset($variables['element']['#entity_type'])) {
+    $suggestions[] = 'form__entity';
+    $suggestions[] = 'form__' . $variables['element']['#entity_type'];
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ *
+ * @param array $variables
+ */
+function adminx_theme_suggestions_input_alter(&$suggestions, $variables) {
+  if (isset($variables['element']['#type']) && $variables['element']['#type'] == 'submit') {
+    if (isset($variables['element']['#ief_form']) && ($variables['element']['#ief_form'] == 'add' || $variables['element']['#ief_form'] == 'ief_add_existing')) {
+      $suggestions[] = 'input__submit__add';
+    }
+    elseif (isset($variables['element']['#ief_row_form']) && $variables['element']['#ief_row_form'] == 'edit') {
+      $suggestions[] = 'input__submit__edit';
+    }
+    elseif (isset($variables['element']['#ief_row_form']) && $variables['element']['#ief_row_form'] == 'remove') {
+      $suggestions[] = 'input__submit__delete';
+    }
+    elseif(
+      isset($variables['element']['#parents']) && (
+        in_array('ief_add_save', $variables['element']['#parents'], TRUE)
+        || in_array('ief_edit_save', $variables['element']['#parents'], TRUE)
+        || in_array('ief_reference_save', $variables['element']['#parents'], TRUE)
+      )
+    ) {
+      $suggestions[] = 'input__submit__save';
+    }
+  }
 
 }
 
@@ -280,24 +409,5 @@ function adminx_theme_suggestions_form_element_alter(&$suggestions, $variables) 
 function adminx_theme_suggestions_textarea_alter(&$suggestions, $variables) {
   if ($variables['element']['#id'] == 'edit-menu-description' || strpos($variables['element']['#id'], 'edit-revision-log') !== FALSE) {
     $suggestions[] = 'textarea__plain';
-  }
-}
-
-/**
- * Implements theme_preprocess_HOOK().
- *
- * @param array $variables
- *   Array of template variables.
- */
-function adminx_preprocess_input__submit(&$variables) {
-  $variables = $variables;
-  if (isset($variables['element']['#ief_form']) && $variables['element']['#ief_form'] == 'add') {
-    $variables['element']['#button_type'] = 'primary';
-  }
-  if(isset($variables['element']['#parents']) && in_array('ief_add_save', $variables['element']['#parents'], TRUE)) {
-    $variables['element']['#button_type'] = 'primary';
-  }
-  if(isset($variables['element']['#parents']) && in_array('remove_button', $variables['element']['#parents'], TRUE)) {
-    $variables['element']['#button_type'] = 'danger';
   }
 }

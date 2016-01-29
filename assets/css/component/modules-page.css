@@ -147,7 +147,8 @@
 .system-modules details {
   border: 0;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  white-space: normal; }
 
 .system-modules summary {
   border-bottom: 1px solid #ccc; }
@@ -161,20 +162,14 @@
 .system-modules .fieldset-wrapper {
   padding: 0; }
 
+.system-modules tr:last-child td {
+  border-bottom: 0; }
+
+.system-modules td.description:before {
+  display: none; }
+
 .system-modules table,
 .locale-translation-status-form table {
-  border: 0; }
-
-.system-modules tr.even,
-.system-modules tr.odd,
-.locale-translation-status-form tr.even,
-.locale-translation-status-form tr.odd {
-  background: #f3f4ee;
-  border: 0;
-  border-bottom: 10px solid #fff; }
-
-.system-modules tr td:last-child,
-.locale-translation-status-form tr td:last-child {
   border: 0; }
 
 .system-modules table th,
@@ -185,3 +180,17 @@
 .system-modules .sticky-header th,
 .locale-translation-status-form .sticky-header th {
   border: 0; }
+
+.system-modules td details {
+  margin-bottom: 0.5em;
+  background: transparent;
+  box-shadow: none; }
+
+.system-modules-uninstall .module-description {
+  display: inline-block;
+  margin-bottom: 0.5em; }
+
+.system-modules-uninstall .admin-requirements {
+  color: #ff9421; }
+
+/*# sourceMappingURL=modules-page.css.map */

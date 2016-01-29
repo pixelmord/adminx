@@ -1,0 +1,1 @@
+{"version":3,"sources":["layout.css"],"names":[],"mappings":"AAAA;EACE,WAAW;EACX,kBAAkB;EAClB,eAAe,EAAE;;AAEnB;EACE,oBAAoB,EAAE","file":"layout/layout.css","sourcesContent":[".layout-container {\n  width: 90%;\n  max-width: 1350px;\n  margin: 0 auto; }\n\n.page-content {\n  padding-bottom: 3em; }\n"],"sourceRoot":"/source/"}
