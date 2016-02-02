@@ -170,6 +170,13 @@
   position: relative;
   border: none;
   background: #F7F7F7; }
+  .vertical-tabs__menu-item .form-required:after {
+    content: '*';
+    color: rgb(222, 50, 38);
+    display: inline-block;
+    margin-left: 0.2em;
+    font-size: 1.2em;
+    line-height: .9; }
 
 .vertical-tabs__menu-item.is-selected {
   z-index: 1;
@@ -276,5 +283,3 @@
 
 .vertical-tabs__pane > summary {
   display: none; }
-
-/*# sourceMappingURL=vertical-tabs.css.map */

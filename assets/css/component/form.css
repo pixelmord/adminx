@@ -188,7 +188,7 @@ form .details-description {
 
 form ul.tips,
 form .description {
-  font-size: 13.6px; }
+  font-size: 12px; }
   form ul.tips:before,
   form .description:before {
     content: '\2139';
@@ -197,10 +197,10 @@ form .description {
     display: inline-block;
     border: 1px solid rgba(97,97,97, 0.90);
     border-radius: 1em;
-    padding: 0 .15em .15em;
+    padding: 0.1em .2em 0.2em 0.25em;
     line-height: 0.9;
     margin-right: 0.2em;
-    margin-top: -0.2em; }
+    margin-top: -0.25em; }
 
 form .ief-cardinality-count,
 form .details-description {
@@ -281,13 +281,6 @@ form {
 /*
 field tables
 */
-.form-item .ief-entity-table,
-.form-item .field-multiple-table {
-  box-shadow: none; }
-  .form-item .ief-entity-table .mdl-textfield,
-  .form-item .field-multiple-table .mdl-textfield {
-    width: 100%; }
-
 /* Filter */
 .form-item .description.error {
   margin-top: 0;
@@ -435,5 +428,3 @@ textarea.form-textarea {
 #diff-inline-form select,
 div.filter-options select {
   padding: 0; }
-
-/*# sourceMappingURL=form.css.map */

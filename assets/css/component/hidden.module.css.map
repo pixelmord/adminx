@@ -1,1 +1,0 @@
-{"version":3,"sources":["hidden.module.css"],"names":[],"mappings":"AAAA;EACE,UAAU,EAAE","file":"component/hidden.module.css","sourcesContent":[".visually-hidden {\n  margin: 0; }\n"],"sourceRoot":"/source/"}

@@ -197,9 +197,6 @@
   overflow: auto;
   padding: 1em; }
 
-.views-ui-dialog .ui-widget-content.ui-dialog-content {
-  padding: 0; }
-
 .ui-dialog .ui-widget-content.ui-dialog-buttonpane {
   background: #f5f5f2;
   /*border-top: 1px solid #bfbfbf;*/
@@ -248,5 +245,3 @@
 .ui-dialog .ajax-progress-throbber .throbber,
 .ui-dialog .ajax-progress-throbber .message {
   display: none; }
-
-/*# sourceMappingURL=dialog.css.map */

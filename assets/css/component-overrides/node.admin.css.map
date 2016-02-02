@@ -1,1 +1,0 @@
-{"version":3,"sources":["node.admin.css"],"names":[],"mappings":"AAAA;;;GAGG;AACH;;GAEG;AACH;EACE,iBAAiB,EAAE","file":"component-overrides/node.admin.css","sourcesContent":["/**\n * @file\n * Styles for administration pages.\n */\n/**\n * Revisions overview screen.\n */\n.revision-current {\n  background: #ffc; }\n"],"sourceRoot":"/source/"}

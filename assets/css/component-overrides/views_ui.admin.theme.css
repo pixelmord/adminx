@@ -264,12 +264,6 @@
 [dir="rtl"] .views-admin a.icon.rearrange {
   background-position: center -111px, right top; }
 
-.views-displays .tabs a:hover > .icon.add {
-  background-position: center -25px; }
-
-.views-displays .tabs .open a:hover > .icon.add {
-  background-position: center 3px; }
-
 details.box-padding {
   border: none; }
 
@@ -478,12 +472,7 @@ td.group-title {
   margin-right: 0.3em; }
 
 .form-edit .form-actions {
-  background-color: #e1e2dc;
-  border-right: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  border-left: 1px solid #ccc;
-  margin-top: 0;
-  padding: 8px 12px; }
+  margin-top: 0; }
 
 .views-displays .tabs.secondary {
   margin-right: 200px;
@@ -548,15 +537,6 @@ td.group-title {
   background-color: #555;
   color: #fff; }
 
-.views-displays .tabs .open > a {
-  background-color: #f1f1f1;
-  border-bottom: 1px solid transparent;
-  position: relative; }
-
-.views-displays .tabs .open > a:hover {
-  color: #0074bd;
-  background-color: #f1f1f1; }
-
 .views-displays .tabs .action-list li {
   background-color: #f1f1f1;
   border-color: #cbcbcb;
@@ -602,8 +582,7 @@ td.group-title {
 .views-display-column + .views-display-column {
   margin-top: 0; }
 
-.view-preview-form .form-item-view-args,
-.view-preview-form .form-actions {
+.view-preview-form .form-item-view-args {
   margin-top: 5px; }
 
 .view-preview-form .arguments-preview {
@@ -623,7 +602,6 @@ td.group-title {
   float: left;
   /* LTR */
   font-weight: normal;
-  height: 6ex;
   margin-right: 0.75em;
   /* LTR */ }
 
@@ -856,12 +834,15 @@ td.group-title {
   border: 1px solid #ccc; }
 
 .view-preview-form {
-  position: relative; }
+  position: relative;
+  padding: 1em; }
 
 .view-preview-form__title {
   background-color: #e1e2dc;
   border-bottom: 1px solid #ccc;
-  margin-top: 0;
+  margin-top: -0.75em;
+  margin-left: -0.75em;
+  margin-right: -0.75em;
   padding: 8px 12px; }
 
 .view-preview-form .form-item-live-preview {
@@ -1007,5 +988,3 @@ td.group-title {
 .form-textarea-wrapper,
 .form-item-options-content {
   width: 100%; }
-
-/*# sourceMappingURL=views_ui.admin.theme.css.map */

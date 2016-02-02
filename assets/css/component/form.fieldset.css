@@ -141,22 +141,22 @@
 /* TOOLTIP */
 fieldset.form-item,
 fieldset {
-  border: none;
-  border-radius: 2px;
-  margin: 2em 0 0;
-  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 0;
+  margin: 2em 0 1em;
+  padding: 1em;
   position: relative;
-  min-width: 0; }
+  min-width: 0;
+  background: #fff; }
   fieldset.form-item > legend,
   fieldset > legend {
     font-weight: 400;
-    font-size: 13px !important;
-    border-bottom: 1px solid rgb(33,150,243);
-    padding-bottom: 0.2em;
-    width: 100%;
-    margin-bottom: 1em;
+    font-size: 16px;
+    padding: 0 0.5em 0.3em;
+    margin-left: -1.5em;
     letter-spacing: 0.08em;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: rgb(33,150,243); }
 
 .fieldgroup {
   min-width: 0; }
@@ -169,5 +169,3 @@ form .layout-region-node-main > fieldset.form-wrapper {
   padding-top: 50px; }
   form .layout-region-node-main > fieldset.form-wrapper > legend {
     top: 20px; }
-
-/*# sourceMappingURL=form.fieldset.css.map */

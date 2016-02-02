@@ -347,7 +347,7 @@
   .mdl-button:active, .button:active {
     background-color: rgba(158,158,158, 0.40); }
   .mdl-button.mdl-button--colored, .mdl-button--colored.button {
-    color: rgb(33,150,243); }
+    color: rgba(33,150,243, 0.9); }
     .mdl-button.mdl-button--colored:focus:not(:active), .mdl-button--colored.button:focus:not(:active) {
       background-color: rgba(0,0,0, 0.12); }
 
@@ -364,7 +364,7 @@ input.mdl-button[type="submit"], input[type="submit"].button {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.18), 0 8px 16px rgba(0, 0, 0, 0.36);
     background-color: rgba(158,158,158, 0.40); }
   .mdl-button--raised.mdl-button--colored, .mdl-button--colored.button {
-    background: rgb(33,150,243);
+    background: rgba(33,150,243, 0.9);
     color: rgb(255,255,255); }
     .mdl-button--raised.mdl-button--colored:hover, .mdl-button--colored.button:hover {
       background-color: rgb(33,150,243); }
@@ -466,12 +466,12 @@ input.mdl-button[type="submit"], input[type="submit"].button {
     background-color: transparent; }
 
 .mdl-button--primary.mdl-button--primary {
-  color: rgb(33,150,243); }
+  color: rgba(33,150,243, 0.9); }
   .mdl-button--primary.mdl-button--primary .mdl-ripple {
     background: rgb(255,255,255); }
   .mdl-button--primary.mdl-button--primary.mdl-button--raised, .mdl-button--primary.mdl-button--primary.button, .mdl-button--primary.mdl-button--primary.mdl-button--fab {
     color: rgb(255,255,255);
-    background-color: rgb(33,150,243); }
+    background-color: rgba(33,150,243, 0.9); }
 
 .mdl-button--accent.mdl-button--accent {
   color: rgb(139,195,74); }
@@ -541,5 +541,3 @@ button > svg {
   top: .4em;
   position: relative;
   margin-right: .3em; }
-
-/*# sourceMappingURL=button.css.map */

@@ -147,4 +147,13 @@
   margin-bottom: 0;
   padding: 0; }
 
-/*# sourceMappingURL=horizontal-tabs.css.map */
+.horizontal-tab-button .form-required:after {
+  content: '*';
+  color: rgb(222, 50, 38);
+  display: inline-block;
+  margin-left: 0.2em;
+  font-size: 1.2em;
+  line-height: .9; }
+
+.horizontal-tab-button a strong {
+  font-weight: 400; }

@@ -139,9 +139,10 @@
 /* GRID */
 /* DATA TABLE */
 /* TOOLTIP */
-.draggable > td:first-child {
-  padding-left: 34px;
+.mdl-data-table tr.draggable > td {
   vertical-align: middle; }
+  .mdl-data-table tr.draggable > td:first-child {
+    padding-left: 34px; }
 
 .draggable .tabledrag-changed {
   padding-left: .5em; }
@@ -169,5 +170,3 @@ a.tabledrag-handle .handle {
 
 .tabledrag-toggle-weight-wrapper .link {
   font-size: 0.7em; }
-
-/*# sourceMappingURL=tabledrag.css.map */

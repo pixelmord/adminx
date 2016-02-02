@@ -174,8 +174,8 @@ textarea:focus {
     padding: 0.5em; }
     .form-textarea-wrapper textarea:focus {
       border-bottom: 2px solid rgb(33,150,243); }
+  .form-textarea-wrapper + .description {
+    margin-top: 0; }
 
 .text-format-wrapper .filter-wrapper {
   margin-top: -1em; }
-
-/*# sourceMappingURL=form.textarea.css.map */
