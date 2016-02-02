@@ -1,2 +1,4 @@
 node_modules
 assets/vendor
+backstop_test/reference/
+backstop_test/test/

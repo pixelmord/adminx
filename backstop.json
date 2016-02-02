@@ -1,0 +1,42 @@
+{
+  "viewports": [
+    {
+      "name": "tablet_h",
+      "width": 1024,
+      "height": 768
+    },
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 900
+    }
+  ],
+  "scenarios": [
+    {
+      "label": "content list",
+      "basePath": "/",
+      "sessionCookie": "SESS_XXXX",
+      "sessionCookieValue": "YYYY",
+      "url": "http://myserver.dev/admin/content",
+      "hideSelectors": [],
+      "removeSelectors": [],
+      "selectors": [
+        "body"
+      ],
+      "readyEvent": null,
+      "delay": 500,
+      "onReadyScript": "login_cookie"
+    }
+  ],
+  "paths": {
+    "bitmaps_reference": "../../backstop_test/reference",
+    "bitmaps_test": "../../backstop_test/test",
+    "compare_data": "../../backstop_test/test/compare.json",
+    "casper_scripts": "../../backstop_test/casper_scripts"
+  },
+  "engine": "phantomjs",
+  "report": ["browser", "CLI"],
+  "cliExitOnFail": true,
+  "debug": false,
+  "port": 3009
+}
