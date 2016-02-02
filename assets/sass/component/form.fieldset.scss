@@ -2,21 +2,21 @@
 
 fieldset.form-item,
 fieldset {
-  border: none;
-  border-radius: 2px;
-  margin: 2em 0 0;
-  padding: 0;
+  border: $data-table-dividers;
+  border-radius: 0;
+  margin: 2em 0 1em;
+  padding: 1em;
   position: relative;
   min-width: 0;
+  background: $white;
   > legend {
     font-weight: 400;
-    font-size: $input-text-floating-label-fontsize !important;
-    border-bottom: 1px solid $label-color;
-    padding-bottom: 0.2em;
-    width: 100%;
-    margin-bottom: 1em;
+    font-size: 16px;
+    padding: 0 0.5em 0.3em;
+    margin-left: -1.5em;
     letter-spacing: 0.08em;
     text-transform: uppercase;
+    color: $label-color;
   }
 
 }

@@ -1,7 +1,5 @@
 @import '../config';
 
-
-
 .fieldgroup {
   padding-top: 30px;
 }
@@ -67,7 +65,7 @@ form {
   }
   ul.tips,
   .description {
-    font-size: $base-font-size * 0.85;
+    font-size: $base-font-size * 0.75;
 
     &:before {
       content: '\2139';
@@ -76,10 +74,10 @@ form {
       display: inline-block;
       border: 1px solid $form-description-color;
       border-radius: 1em;
-      padding: 0 .15em .15em;
+      padding: 0.1em .2em 0.2em 0.25em;
       line-height: 0.9;
       margin-right: 0.2em;
-      margin-top: -0.2em;
+      margin-top: -0.25em;
     }
   }
   .ief-cardinality-count,
@@ -172,16 +170,7 @@ form {
 /*
 field tables
 */
-.form-item {
-  .ief-entity-table,
-  .field-multiple-table {
-    box-shadow: none;
 
-    .mdl-textfield {
-      width: 100%;
-    }
-  }
-}
 
 /* Filter */
 

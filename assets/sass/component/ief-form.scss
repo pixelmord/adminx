@@ -30,9 +30,14 @@
 
 .ief-entity-table {
   margin-bottom: 1em;
+  box-shadow: none;
+
   .ief-entity-operations {
     .button {
       margin-bottom: 0.5em;
     }
+  }
+  .mdl-textfield {
+    width: 100%;
   }
 }

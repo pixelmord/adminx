@@ -4,6 +4,8 @@
  * declarations. For example: display, position, float, clear, and overflow.
  */
 
+@import '../config';
+
 .views-admin ul,
 .views-admin menu,
 .views-admin dir {
@@ -84,29 +86,81 @@
 }
 
 /* The tabs that switch between sections */
-.views-displays .tabs {
-  border-bottom: 0 none;
-  margin: 0;
-  overflow: visible;
-  padding: 0;
+.views-displays {
+  .tabs.secondary {
+    border-bottom: 0 none;
+    margin: 0;
+    overflow: visible;
+    padding: 0;
+
+    > li {
+      border-right: 0 none; /* LTR */
+      float: left; /* LTR */
+      padding: 0;
+    }
+
+    .open > a {
+      position: relative;
+      z-index: 51;
+    }
+
+    .views-display-deleted-link {
+      text-decoration: line-through;
+    }
+
+    .add {
+      position: relative;
+      > a {
+        background: $button-primary-color-alt;
+        padding: 0.2em .5em;
+        height: 26px;
+        color: $white;
+        border-radius: $base-border-radius;
+        box-shadow: $base-box-shadow;
+        .icon {
+          background: none;
+          &:before {
+            content: '+';
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .action-list {
+      left: 0; /* LTR */
+      margin: 0;
+      position: absolute;
+      top: 26px;
+      z-index: 50;
+      input {
+        background: none;
+        box-shadow: none;
+        text-align: left;
+      }
+    }
+
+    .action-list li {
+      display: block;
+    }
+  }
 }
-.views-displays .tabs > li {
-  border-right: 0 none; /* LTR */
-  float: left; /* LTR */
-  padding: 0;
+
+[dir="rtl"] .views-displays {
+  .tabs {
+    > li {
+      float: right;
+      border-left: 0 none;
+      border-right: 1px solid #bfbfbf;
+    }
+
+    .action-list {
+      left: auto;
+      right: 0;
+    }
+  }
 }
-[dir="rtl"] .views-displays .tabs > li {
-  float: right;
-  border-left: 0 none;
-  border-right: 1px solid #bfbfbf;
-}
-.views-displays .tabs .open > a {
-  position: relative;
-  z-index: 51;
-}
-.views-displays .tabs .views-display-deleted-link {
-  text-decoration: line-through;
-}
+
 .views-display-deleted > details > summary,
 .views-display-deleted .details-wrapper > .views-ui-display-tab-bucket > *,
 .views-display-deleted .views-display-columns {
@@ -120,23 +174,8 @@
 .views-display-tab .details-wrapper > .views-ui-display-tab-bucket .actions {
   opacity: 1.0;
 }
-.views-displays .tabs .add {
-  position: relative;
-}
-.views-displays .tabs .action-list {
-  left: 0; /* LTR */
-  margin: 0;
-  position: absolute;
-  top: 23px;
-  z-index: 50;
-}
-[dir="rtl"] .views-displays .tabs .action-list {
-  left: auto;
-  right: 0;
-}
-.views-displays .tabs .action-list li {
-  display: block;
-}
+
+
 .views-display-columns .details-wrapper {
   padding: 0;
 }

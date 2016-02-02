@@ -30,6 +30,17 @@
   position: relative;
   border: none;
   background: #F7F7F7;
+
+  .form-required {
+    &:after {
+      content: '*';
+      color: $input-text-error-color;
+      display: inline-block;
+      margin-left: 0.2em;
+      font-size: 1.2em;
+      line-height: .9;
+    }
+  }
 }
 .vertical-tabs__menu-item.is-selected {
   z-index: 1;

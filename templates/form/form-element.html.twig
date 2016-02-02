@@ -58,7 +58,7 @@
   ]
 %}
 {%
-set labelclass = 'mdl-' ~ type|clean_class ~ '__label'
+set labelclass = label_display == 'invisible' ? 'mdl-' ~ type|clean_class ~ '__label visually-hidden' : 'mdl-' ~ type|clean_class ~ '__label'
 %}
 {%
   set description_classes = [

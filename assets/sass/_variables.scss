@@ -148,7 +148,7 @@ $button-active-color: unquote("rgba(#{$palette-grey-500}, 0.40)") !default;
 $button-focus-color: unquote("rgba(#{$color-black}, 0.12)") !default;
 
 // Colored button colors.
-$button-primary-color-alt: unquote("rgb(#{$color-primary})") !default;
+$button-primary-color-alt: unquote("rgba(#{$color-primary}, 0.9)") !default;
 $button-secondary-color-alt: unquote("rgb(#{$color-primary-contrast})") !default;
 $button-hover-color-alt: unquote("rgb(#{$color-primary})") !default;
 $button-active-color-alt: unquote("rgb(#{$color-primary})") !default;

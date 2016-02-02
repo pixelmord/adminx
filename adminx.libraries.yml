@@ -37,6 +37,8 @@ global-styling:
 
       assets/css/component/form.css: {}
 
+      assets/css/component/form.field-multiple.css: {}
+
       assets/css/component/form.fieldset.css: {}
 
       assets/css/component/form.form-element.css: {}
@@ -189,3 +191,9 @@ views_ui.admin.styling:
       assets/css/component-overrides/views_ui.admin.css: {}
     theme:
       assets/css/component-overrides/views_ui.admin.theme.css: {}
+
+validation-improvements:
+  js:
+    assets/js/validation-improvement.js: {}
+  dependencies:
+    - core/jquery.once

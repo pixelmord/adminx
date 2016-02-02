@@ -23,6 +23,10 @@ textarea {
       border-bottom: 2px solid $input-text-highlight-color;
     }
   }
+
+  & + .description {
+    margin-top: 0;
+  }
 }
 .text-format-wrapper {
   .filter-wrapper {
