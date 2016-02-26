@@ -1,3 +1,7 @@
 
 @import '../config';
 @import "material-design-lite/src/radio/radio";
+
+.mdl-radio {
+  display: block;
+}

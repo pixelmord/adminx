@@ -7,8 +7,13 @@
 
 .container-inline {
   display: flex;
+
   .form-item {
-    margin: 0;
+    margin: 0 1rem 0 0;
     width: auto;
+  }
+
+  button {
+    min-width: 12rem;
   }
 }
