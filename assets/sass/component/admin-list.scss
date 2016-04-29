@@ -3,6 +3,8 @@
 .admin-list {
   margin: 0;
   padding: 0;
+
+  dt,
   li {
     position: relative;
     border-bottom: 1px solid #bfbfbf;
@@ -17,27 +19,32 @@
       padding: 14px 15px 14px 25px; /* LTR */
       min-height: 0;
       text-transform: uppercase;
+
       &:before {
         content: '\25B8';
         font-weight: 900;
         position: absolute;
-        top: 0.55em;
+        top: 0.625em;
         font-size: 1.3em;
         line-height: 1em;
         margin-left: -0.9em; /* LTR */
       }
+
       > .label {
         text-transform: uppercase;
       }
+
       > .description {
         font-size: 12px;
         color: $form-description-color;
         text-transform: none;
       }
+
       &:hover,
       &:focus,
       &:active {
         text-decoration: none;
+
         > .label {
           text-decoration: underline;
         }
@@ -45,8 +52,10 @@
     }
   }
   &.compact {
+    dt,
     li {
       border: none;
+
       a {
         background-image:  none;
         padding: 2px 0;
@@ -55,6 +64,7 @@
   }
 }
 .admin-list--add {
+  dt,
   li {
     a {
       &:before {
@@ -64,11 +74,12 @@
   }
 }
 [dir="rtl"] .admin-list {
+  dt,
   li {
-
     a {
       padding-right: 25px;
       padding-left: 15px;
+
       &:before {
         margin-left: 0;
         margin-right: -0.9em;

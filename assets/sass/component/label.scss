@@ -9,7 +9,7 @@ label {
   padding: 0;
   font-weight: 400;
   color: $label-color;
-  font-size: $input-text-floating-label-fontsize !important;
+  font-size: $input-text-floating-label-fontsize;
 
   &.mdl-textfield__label,
   &.mdl-checkbox,
@@ -22,7 +22,7 @@ label {
     font-weight: normal;
   }
   [class$="_label"] {
-    font-size: $input-text-floating-label-fontsize !important;
+    font-size: $input-text-floating-label-fontsize;
   }
   .form-required {
     padding-right: 2em;
@@ -47,7 +47,7 @@ label {
 .mdl-textfield--floating-label .mdl-textfield__label {
   margin: 0;
   color: $label-color;
-  font-size: $input-text-floating-label-fontsize !important;
+  font-size: $input-text-floating-label-fontsize;
 }
 label.error {
   color: #a51b00;

@@ -29,11 +29,13 @@
 .mdl-textfield--floating-label {
   .mdl-textfield__label {
     color: $label-color;
+    font-size: $input-text-floating-label-fontsize;
   }
 
   &.is-invalid {
     .mdl-textfield__label {
       color: $label-color;
+      font-size: $input-text-floating-label-fontsize;
     }
     .mdl-textfield__input {
       border-color: $input-text-bottom-border-color;
@@ -50,5 +52,12 @@
     &:focus {
       box-shadow: none;
     }
+  }
+}
+.mdl-textfield__label {
+  .mdl-textfield--floating-label.is-focused &,
+  .mdl-textfield--floating-label.is-dirty &,
+  .mdl-textfield--floating-label.has-placeholder & {
+    font-size: $input-text-floating-label-fontsize-active !important;
   }
 }
