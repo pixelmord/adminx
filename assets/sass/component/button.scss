@@ -4,21 +4,25 @@
 
 .mdl-button--icon {
   border-radius: $button-border-radius;
+
   > svg {
-    margin: 0;
-    top: 0.2em;
+    top: 0;
+    margin: 0.2em;
   }
 }
 
 .mdl-button--danger {
   color: $error-color;
+
   & .mdl-ripple {
     background: $error-color-inverted;
   }
+
   &.mdl-button--raised, &.mdl-button--fab {
     color: $error-color;
     background-color: $error-color-inverted;
   }
+
   &.mdl-button--icon {
     svg {
       fill: $error-color;
@@ -30,6 +34,7 @@
   > svg {
     fill: $white;
   }
+
   &.button--primary {
     background: $drupal-blue;
   }
@@ -65,8 +70,9 @@
 
 button {
   > svg {
-    top: .4em;
+    top: .33em;
     position: relative;
-    margin-right: .3em;
+    float: left;
+    margin-right: 0.3em;
   }
 }

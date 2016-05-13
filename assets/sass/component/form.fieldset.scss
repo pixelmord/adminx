@@ -9,10 +9,12 @@ fieldset {
   position: relative;
   min-width: 0;
   background: $white;
+
   > legend {
     font-weight: 400;
     font-size: 16px;
-    padding: 0 1em;
+    padding-left: 1em;
+    padding-right: 1em;
     margin-left: -1em;
     letter-spacing: 0.08em;
     text-transform: uppercase;

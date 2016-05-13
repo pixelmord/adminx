@@ -1,0 +1,15 @@
+@import '../config';
+
+.ajax-progress-spinner {
+  width: $spinner-size;
+  height: $spinner-size;
+  display: inline-block;
+  div {
+    display: inline-block;
+  }
+  .mdl-spinner {
+    width: $spinner-size;
+    height: $spinner-size;
+
+  }
+}

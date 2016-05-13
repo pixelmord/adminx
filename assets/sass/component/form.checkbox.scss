@@ -1,3 +1,7 @@
 @import '../config';
 @import "material-design-lite/src/checkbox/checkbox";
 
+
+.mdl-checkbox .mdl-checkbox__label {
+  font-size: $input-text-floating-label-fontsize-active;
+}

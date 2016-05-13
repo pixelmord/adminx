@@ -4,4 +4,8 @@
 
 .mdl-radio {
   display: block;
+  .mdl-radio__label {
+    font-size: $input-text-floating-label-fontsize-active;
+  }
 }
+

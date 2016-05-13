@@ -11,7 +11,11 @@ global-styling:
 
       assets/css/component/admin-list.css: {}
 
+      assets/css/component/ajax-progress.css: {}
+
       assets/css/component/autocomplete-loading.module.css: {}
+
+      assets/css/component/autocomplete.css: {}
 
       assets/css/component/breadcrumbs.css: {}
 
@@ -197,3 +201,9 @@ validation-improvements:
     assets/js/validation-improvement.js: {}
   dependencies:
     - core/jquery.once
+
+adminx.ajax:
+  js:
+    assets/js/adminx.ajax.js: {}
+  dependencies:
+    - core/drupal.ajax

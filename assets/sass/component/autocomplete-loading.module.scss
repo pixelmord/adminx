@@ -5,6 +5,8 @@
  * @see autocomplete.js
  */
 
+@import '../config';
+
 .js .form-type-entity-autocomplete {
   input.form-autocomplete {
     background-image: url(../../images/icons/ic_arrow_drop_down_circle_gray_18px.svg);

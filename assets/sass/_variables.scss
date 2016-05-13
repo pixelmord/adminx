@@ -141,9 +141,9 @@ $fieldset-ief-form-border-color: unquote("rgba(#{$color-primary}, 0.7)") !defaul
   /* ==========  Standard Buttons  ========== */
 
 // Default button colors.
-$button-primary-color: unquote("rgba(#{$palette-grey-500}, 0.20)") !default;
+$button-primary-color: rgba(0,63,134,0.3);
 $button-secondary-color: unquote("rgb(#{$color-black})") !default;
-$button-hover-color: $button-primary-color !default;
+$button-hover-color: rgba(0,63,134,0.4);
 $button-active-color: unquote("rgba(#{$palette-grey-500}, 0.40)") !default;
 $button-focus-color: unquote("rgba(#{$color-black}, 0.12)") !default;
 
@@ -342,7 +342,7 @@ $switch-helper-size: 8px;
 
 /* SPINNER */
 
-$spinner-size: 28px !default;
+$spinner-size: 28px;
 $spinner-stroke-width: 3px !default;
 
 // Amount of circle the arc takes up.
@@ -481,7 +481,7 @@ $card-background-image-url: '' !default;
  *
  */
 $button-min-width: 64px !default;
-$button-height: 36px !default;
+$button-height: 34px;
 $button-padding: 8px !default;
 $button-margin: 4px !default;
 $button-border-radius: 2px !default;

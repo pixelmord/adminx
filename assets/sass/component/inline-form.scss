@@ -38,15 +38,17 @@
 
 .form--inline {
   .mdl-textfield--floating-label {
-    margin-top: 20px;
+    margin-top: 22px;
     &.is-focused .mdl-textfield__label,
-    &.is-dirty .mdl-textfield__label {
-      top: -7px;
+    &.is-dirty .mdl-textfield__label,
+    &.has-placeholder .mdl-textfield__label {
+      top: -10px;
+      font-size: $input-text-floating-label-fontsize;
     }
   }
 }
 .form--inline-actions .form-actions {
   clear: none;
   float: left;
-  margin-top:  32px;
+  margin-top:  35px;
 }

@@ -37,7 +37,8 @@ label {
       margin-top: -0.2em;
     }
     .form-type-entity-autocomplete &:after {
-      margin-top: -0.05em;
+      margin-top: -0.15em;
+      right: 0.06em;
     }
   }
   th > & {
@@ -49,6 +50,7 @@ label {
   color: $label-color;
   font-size: $input-text-floating-label-fontsize;
 }
+
 label.error {
   color: #a51b00;
 }
